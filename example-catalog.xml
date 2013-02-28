@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE module_updates PUBLIC "-//NetBeans//DTD Autoupdate Catalog 2.7//EN"
+        "http://www.netbeans.org/dtds/autoupdate-catalog-2_7.dtd">
+<module_updates timestamp="32/47/08/07/11/2012">
+
+
+    <content_description url="http://netbeans.org/community/releases/73/">NetBeans 7.3 Beta 2</content_description>
+
+
+    <module codenamebase="com.atlassian.connector.eclipse.commons.core"
+            distribution="modules/extra/com-atlassian-connector-eclipse-commons-core.jar" downloadsize="6423"
+            targetcluster="extra">
+        <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="com.atlassian.connector.eclipse.commons.core"
+                  OpenIDE-Module-Module-Dependencies="org.eclipse.core.runtime, org.eclipse.mylyn.commons.core, org.eclipse.mylyn.commons.net"
+                  OpenIDE-Module-Name="Atlassian Connector for Eclipse Commons Core"
+                  OpenIDE-Module-Specification-Version="3.0.4"/>
+    </module>
+
+    <module codenamebase="com.atlassian.connector.eclipse.jira.core"
+            distribution="modules/extra/com-atlassian-connector-eclipse-jira-core.jar" downloadsize="442004"
+            targetcluster="extra">
+        <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="com.atlassian.connector.eclipse.jira.core"
+                  OpenIDE-Module-Module-Dependencies="javax.xml.rpc &gt; 1.1.0, javax.xml.soap &gt; 1.2.0, org.apache.axis &gt; 1.4.0, org.apache.commons.io, org.eclipse.core.runtime, org.eclipse.mylyn.commons.core &gt; 3.0.0, org.eclipse.mylyn.commons.net &gt; 3.0.0, org.eclipse.mylyn.commons.soap &gt; 3.0.0, org.eclipse.mylyn.tasks.core &gt; 3.0.0, com.atlassian.connector.eclipse.commons.core"
+                  OpenIDE-Module-Name="Atlassian Connector for Eclipse Jira Core"
+                  OpenIDE-Module-Specification-Version="3.0.4"/>
+    </module>
+
+    <module autoload="true" codenamebase="org.netbeans.libs.findbugs"
+            distribution="modules/extra/org-netbeans-libs-findbugs.nbm" downloadsize="4987661"
+            homepage="http://www.netbeans.org/" license="5885A793" moduleauthor="" needsrestart="false"
+            releasedate="2012/11/07">
+        <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.libs.findbugs"
+                  OpenIDE-Module-Implementation-Version="201211062253" OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                  OpenIDE-Module-Name="FindBugs Library Wrapper" OpenIDE-Module-Provides="findbugs"
+                  OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                  OpenIDE-Module-Specification-Version="1.0"/>
+
+    </module>
+
+    <module codenamebase="javax.activation" distribution="modules/extra/javax-activation.jar" downloadsize="52348"
+            targetcluster="extra">
+        <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="javax.activation"
+                  OpenIDE-Module-Name="javax.activation" OpenIDE-Module-Specification-Version="1.1.0"/>
+    </module>
+
+    <module codenamebase="javax.mail" distribution="modules/extra/javax-mail.jar" downloadsize="323690"
+            targetcluster="extra">
+        <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="javax.mail" OpenIDE-Module-Name="javax.mail"
+                  OpenIDE-Module-Specification-Version="1.4.0"/>
+    </module>
+
+    <module codenamebase="javax.xml.rpc" distribution="modules/extra/javax-xml-rpc.jar" downloadsize="36823"
+            targetcluster="extra">
+        <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="javax.xml.rpc"
+                  OpenIDE-Module-Module-Dependencies="javax.servlet, javax.xml.soap" OpenIDE-Module-Name="javax.xml.rpc"
+                  OpenIDE-Module-Specification-Version="1.1.0"/>
+    </module>
+
+    <module codenamebase="javax.xml.soap" distribution="modules/extra/javax-xml-soap.jar" downloadsize="22273"
+            targetcluster="extra">
+        <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="javax.xml.soap" OpenIDE-Module-Name="javax.xml.soap"
+                  OpenIDE-Module-Specification-Version="1.2.0"/>
+    </module>
+
+    <module codenamebase="org.netbeans.modules.kenai.maven"
+            distribution="modules/extra/org-netbeans-modules-kenai-maven.nbm" downloadsize="21192" eager="true"
+            homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+            releasedate="2012/11/07">
+        <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.kenai.maven"
+                  OpenIDE-Module-Implementation-Version="201211062253" OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                  OpenIDE-Module-Module-Dependencies="org.netbeans.api.progress/1 &gt; 1.14, org.netbeans.modules.kenai &gt; 1.0, org.netbeans.modules.maven/2 &gt; 2.0, org.netbeans.modules.maven.model/1 &gt; 1.2, org.netbeans.modules.projectapi/1 &gt; 1.26, org.netbeans.modules.xml.xam/1 &gt; 1.6.1, org.openide.awt &gt; 7.14, org.openide.filesystems &gt; 7.23, org.openide.text &gt; 6.24, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0"
+                  OpenIDE-Module-Name="Maven Kenai" OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                  OpenIDE-Module-Specification-Version="1.7"/>
+
+    </module>
+
+    <module codenamebase="org.eclipse.mylyn.commons.soap"
+            distribution="modules/extra/org-eclipse-mylyn-commons-soap.jar" downloadsize="34305" targetcluster="extra">
+        <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.eclipse.mylyn.commons.soap"
+                  OpenIDE-Module-Module-Dependencies="javax.xml.rpc &gt; 1.1.0, javax.xml.soap &gt; 1.2.0, org.apache.axis &gt; 1.4.0, org.apache.commons.httpclient &gt; 3.1.0, org.eclipse.core.runtime, org.eclipse.core.net, org.eclipse.mylyn.commons.net &gt; 3.8.0"
+                  OpenIDE-Module-Name="Mylyn Commons Soap" OpenIDE-Module-Specification-Version="3.8.2"/>
+    </module>
+
+    <module codenamebase="org.apache.axis" distribution="modules/extra/org-apache-axis.jar" downloadsize="1663915"
+            targetcluster="extra">
+        <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.apache.axis"
+                  OpenIDE-Module-Module-Dependencies="javax.xml.rpc &gt; 1.1.0, javax.xml.soap &gt; 1.2.0, javax.wsdl &gt; 1.5.1, org.apache.commons.discovery &gt; 0.2.0"
+                  OpenIDE-Module-Name="org.apache.axis" OpenIDE-Module-Specification-Version="1.4.0"/>
+    </module>
+
+    <module codenamebase="org.apache.commons.discovery" distribution="modules/extra/org-apache-commons-discovery.jar"
+            downloadsize="76708" targetcluster="extra">
+        <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.apache.commons.discovery"
+                  OpenIDE-Module-Name="org.apache.commons.discovery" OpenIDE-Module-Specification-Version="0.2.0"/>
+    </module>
+
+    <module codenamebase="org.eclipse.mylyn.monitor.ui.dummy"
+            distribution="modules/extra/org-eclipse-mylyn-monitor-ui-dummy.jar" downloadsize="1555"
+            targetcluster="extra">
+        <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.eclipse.mylyn.monitor.ui.dummy"
+                  OpenIDE-Module-Name="org.eclipse.mylyn.monitor.ui.dummy"
+                  OpenIDE-Module-Specification-Version="3.4.0"/>
+    </module>
+
+    <module codenamebase="org.netbeans.modules.vmd.midp.converter"
+            distribution="modules/extra/org-netbeans-modules-vmd-midp-converter.nbm" downloadsize="41484"
+            homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+            releasedate="2012/11/07" targetcluster="mobility">
+        <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.vmd.midp.converter"
+                  OpenIDE-Module-Implementation-Version="201211062253" OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                  OpenIDE-Module-Module-Dependencies="org.netbeans.api.visual &gt; 2.5, org.netbeans.libs.javacapi &gt; 0.5, org.netbeans.modules.editor.guards/1 &gt; 1.0, org.netbeans.modules.java.source &gt; 0.67, org.netbeans.modules.mobility.editor &gt; 1.1.2, org.netbeans.modules.mobility.licensing &gt; 1.0, org.netbeans.modules.mobility.project &gt; 1.2, org.netbeans.modules.project.ant/1 &gt; 1.16, org.netbeans.modules.projectapi/1 &gt; 1.13, org.netbeans.modules.vmd.codegen &gt; 1.0, org.netbeans.modules.vmd.flow &gt; 1.0, org.netbeans.modules.vmd.io &gt; 1.0, org.netbeans.modules.vmd.midp &gt; 1.0, org.netbeans.modules.vmd.midpnb &gt; 1.0, org.netbeans.modules.vmd.model &gt; 1.0, org.netbeans.modules.vmd.screen &gt; 1.0, org.openide.actions &gt; 6.6, org.openide.awt &gt; 7.10, org.openide.dialogs &gt; 7.5, org.openide.filesystems &gt; 7.19, org.openide.loaders &gt; 7.0, org.openide.nodes &gt; 7.2, org.openide.text &gt; 6.16, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0, org.openide.windows &gt; 6.16"
+                  OpenIDE-Module-Name="VMD MIDP Converter" OpenIDE-Module-Needs="javax.script.ScriptEngine.freemarker"
+                  OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                  OpenIDE-Module-Specification-Version="1.16"/>
+
+    </module>
+
+    <module_group name="Base IDE">
+
+        <module codenamebase="org.netbeans.modules.versioning.system.cvss"
+                distribution="modules/extra/org-netbeans-modules-versioning-system-cvss.nbm" downloadsize="291586"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07">
+            <manifest AutoUpdate-Show-In-Client="true" OpenIDE-Module="org.netbeans.modules.versioning.system.cvss/1"
+                      OpenIDE-Module-Display-Category="Base IDE" OpenIDE-Module-Implementation-Version="1"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Long-Description="Introduces project level CVS (Concurrent Versioning System) features. Version control actions, such as diff, update, and commit aid in streamlining typical team development cycles."
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.api.progress/1 &gt; 1.0, org.netbeans.lib.cvsclient/1 &gt; 1.0, com.jcraft.jsch &gt; 0.1.43, org.netbeans.modules.diff/1 = 42, org.netbeans.modules.editor/3 &gt; 1.53, org.netbeans.modules.editor.errorstripe/2 = 1, org.netbeans.modules.editor.fold/1, org.netbeans.modules.editor.lib/3 &gt; 3.1, org.netbeans.modules.editor.mimelookup/1, org.netbeans.modules.editor.settings/1 &gt; 1.20, org.netbeans.modules.options.api/1 &gt; 1.29, org.netbeans.modules.projectapi/1, org.netbeans.modules.projectuiapi/1, org.netbeans.modules.queries/1 &gt; 1.4, org.netbeans.modules.spellchecker.apimodule &gt; 1.3, org.netbeans.modules.versioning/1 &gt; 1.17, org.netbeans.modules.versioning.util &gt; 1.34, org.netbeans.swing.outline &gt; 1.4, org.openide.awt &gt; 6.0, org.openide.dialogs &gt; 7.8, org.openide.explorer &gt; 6.8, org.openide.filesystems &gt; 7.19, org.openide.io, org.openide.loaders, org.openide.modules &gt; 7.25, org.openide.nodes &gt; 6.0, org.openide.text &gt; 6.16, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0, org.openide.windows &gt; 6.0"
+                      OpenIDE-Module-Name="CVS" OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Integrates CVS actions into IDE workflow."
+                      OpenIDE-Module-Specification-Version="1.24.1.1.42.1"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.jira" distribution="modules/extra/org-netbeans-modules-jira.nbm"
+                downloadsize="114727" homepage="http://www.netbeans.org/" license="8B813426" moduleauthor=""
+                needsrestart="true" releasedate="2012/11/07">
+            <manifest AutoUpdate-Show-In-Client="true" OpenIDE-Module="org.netbeans.modules.jira"
+                      OpenIDE-Module-Display-Category="Base IDE" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Long-Description="Support for JIRA issue tracker from version 3.13 up to version 5.0"
+                      OpenIDE-Module-Module-Dependencies="com.atlassian.connector.eclipse.jira.core, javax.activation, javax.mail, javax.wsdl, org.apache.commons.logging, org.eclipse.core.runtime, org.eclipse.equinox.common, org.eclipse.mylyn.commons.net &gt; 3.6.0, org.eclipse.mylyn.monitor.ui.dummy, org.eclipse.mylyn.tasks.core &gt; 3.6.0, org.netbeans.api.progress/1 &gt; 1.13, org.netbeans.libs.osgi &gt; 1.0, org.netbeans.modules.autoupdate.services &gt; 1.9, org.netbeans.modules.autoupdate.ui &gt; 1.30, org.netbeans.modules.bugtracking &gt; 1.35, org.netbeans.modules.diff/1 &gt; 1.22, org.netbeans.modules.keyring &gt; 1.0, org.netbeans.modules.mylyn.util &gt; 1.0, org.netbeans.modules.options.api/1 &gt; 1.29, org.netbeans.modules.spellchecker.apimodule &gt; 1.3, org.openide.awt &gt; 7.3, org.openide.dialogs &gt; 7.8, org.openide.filesystems &gt; 7.21, org.openide.loaders &gt; 7.5, org.openide.modules &gt; 6.0, org.openide.nodes &gt; 7.7, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0, org.openide.windows &gt; 6.24"
+                      OpenIDE-Module-Name="JIRA" OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="JIRA" OpenIDE-Module-Specification-Version="1.16.0"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.team.kit"
+                distribution="modules/extra/org-netbeans-modules-team-kit.nbm" downloadsize="16919"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07">
+            <manifest AutoUpdate-Show-In-Client="true" OpenIDE-Module="org.netbeans.modules.team.kit"
+                      OpenIDE-Module-Display-Category="Base IDE" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Long-Description="Support for team development: integration with &lt;a href=&quot;http://java.net&quot;&gt;java.net&lt;/a&gt;, &lt;a href=&quot;http://kenai.com&quot;&gt;kenai.com&lt;/a&gt;, and chat."
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.libs.smack &gt; 3.1, org.netbeans.modules.kenai &gt; 0.1, org.netbeans.modules.kenai.ui &gt; 1.9"
+                      OpenIDE-Module-Name="Team Server" OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Team development: kenai.com, chat."
+                      OpenIDE-Module-Specification-Version="1.8"/>
+
+        </module>
+
+    </module_group>
+
+    <module_group name="Bridges">
+
+        <module codenamebase="org.netbeans.modules.profiler.loadgen"
+                distribution="modules/extra/org-netbeans-modules-profiler-loadgen.nbm" downloadsize="19357" eager="true"
+                homepage="http://profiler.netbeans.org" license="8B813426" moduleauthor="Jaroslav Bachorik"
+                needsrestart="false" releasedate="2012/11/07">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.profiler.loadgen/1"
+                      OpenIDE-Module-Display-Category="Bridges" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Long-Description="This module provides a bridge between the NetBeans Profiler and the LoadGenerator module. By using this module the profiler is able to utilize all registered load generator engines for generating load for a profiled application"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.modules.java.project/1 &gt; 1.12, org.netbeans.modules.loadgenerator/1 &gt; 1.2, org.netbeans.modules.profiler.api/1 &gt; 1.0, org.netbeans.modules.projectapi/1 &gt; 1.12, org.openide.filesystems &gt; 7.0, org.openide.util.lookup &gt; 8.0"
+                      OpenIDE-Module-Name="Profiler / Load Generator Bridge"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Profiler -&gt; LoadGenerator Bridge"
+                      OpenIDE-Module-Specification-Version="1.7"/>
+
+        </module>
+
+    </module_group>
+
+    <module_group name="Database">
+
+        <module codenamebase="org.netbeans.modules.db.mysql.sakila"
+                distribution="modules/extra/org-netbeans-modules-db-mysql-sakila.nbm" downloadsize="682146"
+                homepage="http://wiki.netbeans.org/SakilaSampleDatabasePlugin" license="8B813426"
+                moduleauthor="Sun Microsystems, Inc." needsrestart="false" releasedate="2012/11/07">
+            <manifest AutoUpdate-Show-In-Client="true" OpenIDE-Module="org.netbeans.modules.db.mysql.sakila"
+                      OpenIDE-Module-Display-Category="Database" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Long-Description="This modules plugs into the NetBeans MySQL support in the Database Explorer, making it possible to easily create the Sakila sample database from within NetBeans.&#10;&#10;For more information on Sakila see http://forge.mysql.com/wiki/SakilaSampleDB"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.modules.db/1 &gt; 1.28, org.netbeans.modules.db.core &gt; 1.7, org.netbeans.modules.db.kit &gt; 1.3, org.netbeans.modules.db.mysql &gt; 0.1, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0"
+                      OpenIDE-Module-Name="Sakila Sample Database"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Provides Sakila sample database for NetBeans MySQL support"
+                      OpenIDE-Module-Specification-Version="1.2"/>
+
+        </module>
+
+    </module_group>
+
+    <module_group name="Developing NetBeans">
+
+        <module codenamebase="org.netbeans.modules.apisupport.tc.cobertura"
+                distribution="modules/extra/org-netbeans-modules-apisupport-tc-cobertura.nbm" downloadsize="295364"
+                homepage="http://www.netbeans.org/" license="C571AB52" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="harness">
+            <manifest AutoUpdate-Show-In-Client="true" OpenIDE-Module="org.netbeans.modules.apisupport.tc.cobertura"
+                      OpenIDE-Module-Display-Category="Developing NetBeans"
+                      OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Long-Description="Ant targets for measuring test coverage of apisupport projects using Cobertura.&#10;Run 'display-coverage-report' target on a project to measure results and display report in external browser.&#10;For integration with Module Build Harness."
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.modules.apisupport.harness &gt; 1.18"
+                      OpenIDE-Module-Name="Cobertura Module Test Coverage"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Ant targets for measuring test coverage of apisupport projects using Cobertura."
+                      OpenIDE-Module-Specification-Version="1.5"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.apisupport.apidocs"
+                distribution="modules/extra/org-netbeans-modules-apisupport-apidocs.nbm" downloadsize="28327070"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="true"
+                releasedate="2012/11/07">
+            <manifest AutoUpdate-Show-In-Client="true" OpenIDE-Module="org.netbeans.modules.apisupport.apidocs"
+                      OpenIDE-Module-Display-Category="Developing NetBeans"
+                      OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.4"
+                      OpenIDE-Module-Long-Description="Includes a complete copy of the NetBeans API documentation for offline browsing and Javadoc index searching. Covers all of the official API modules plus some APIs considered under development."
+                      OpenIDE-Module-Name="NetBeans API Documentation"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Local documentation for the NetBeans APIs."
+                      OpenIDE-Module-Specification-Version="2.26"/>
+
+        </module>
+
+    </module_group>
+
+    <module_group name="Java">
+
+        <module codenamebase="org.apache.tools.ant.module.docs"
+                distribution="modules/extra/org-apache-tools-ant-module-docs.nbm" downloadsize="1024400"
+                homepage="http://www.netbeans.org/" license="34C96EB2" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07">
+            <manifest AutoUpdate-Show-In-Client="true" OpenIDE-Module="org.apache.tools.ant.module.docs"
+                      OpenIDE-Module-Display-Category="Java" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.4"
+                      OpenIDE-Module-Long-Description="As a supplement to the main Ant module, adds the Ant user manual. Use Help &gt; Contents and browse or search for tasks by name or function."
+                      OpenIDE-Module-Module-Dependencies="org.apache.tools.ant.module/2-3"
+                      OpenIDE-Module-Name="Ant 1.8.4 Documentation"
+                      OpenIDE-Module-Requires="org.netbeans.api.javahelp.Help, org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Documentation for the Ant build tool."
+                      OpenIDE-Module-Specification-Version="2.28"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.findbugs"
+                distribution="modules/extra/org-netbeans-modules-findbugs.nbm" downloadsize="38893"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07">
+            <manifest AutoUpdate-Show-In-Client="true" OpenIDE-Module="org.netbeans.modules.findbugs"
+                      OpenIDE-Module-Display-Category="Java" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Long-Description="FindBugs Integration"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.api.annotations.common/1 &gt; 1.13, org.netbeans.api.java.classpath/1 &gt; 1.32, org.netbeans.api.progress/1 &gt; 1.27, org.netbeans.libs.findbugs &gt; 1.0, org.netbeans.libs.javacapi &gt; 7.9, org.netbeans.modules.code.analysis/0-1 &gt; 1.8, org.netbeans.modules.editor.util/1 &gt; 1.47, org.netbeans.modules.java.source &gt; 0.99, org.netbeans.modules.options.api/1 &gt; 1.25, org.netbeans.modules.options.editor/1 &gt; 1.28, org.netbeans.modules.parsing.api/1 &gt; 1.52, org.netbeans.modules.queries/1 &gt; 1.27, org.netbeans.modules.refactoring.api &gt; 1.22, org.netbeans.spi.editor.hints/0 &gt; 1.22, org.openide.awt &gt; 7.42, org.openide.dialogs &gt; 7.24, org.openide.filesystems &gt; 7.57, org.openide.loaders &gt; 7.35, org.openide.modules &gt; 7.28, org.openide.nodes &gt; 7.27, org.openide.text &gt; 6.44, org.openide.util &gt; 8.22, org.openide.util.lookup &gt; 8.12"
+                      OpenIDE-Module-Name="FindBugs Integration"
+                      OpenIDE-Module-Recommends="org.netbeans.modules.findbugs.installer"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="FindBugs Integration"
+                      OpenIDE-Module-Specification-Version="1.18"/>
+
+        </module>
+
+    </module_group>
+
+    <module_group name="Java SE">
+
+        <module codenamebase="org.netbeans.modules.junitlib"
+                distribution="modules/extra/org-netbeans-modules-junitlib.nbm" downloadsize="10652" global="false"
+                homepage="http://www.netbeans.org/" license="DCE70611" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="java">
+            <manifest AutoUpdate-Show-In-Client="true" OpenIDE-Module="org.netbeans.modules.junitlib"
+                      OpenIDE-Module-Display-Category="Java SE" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Long-Description="Includes the JUnit unit testing library and corresponding library definitions. 3.x and 4.x versions are both included."
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.libs.junit4 &gt; 1.14"
+                      OpenIDE-Module-Name="JUnit" OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Bundles the JUnit testing library."
+                      OpenIDE-Module-Specification-Version="1.1"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.swingapplib"
+                distribution="modules/extra/org-netbeans-modules-swingapplib.nbm" downloadsize="15824"
+                homepage="http://www.netbeans.org/" license="DF4AB1BE" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="java">
+            <manifest AutoUpdate-Show-In-Client="true" OpenIDE-Module="org.netbeans.modules.swingapplib"
+                      OpenIDE-Module-Display-Category="Java SE" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Long-Description="Contains the Swing Application Framework library only. It doesn't include support for the design of GUI forms that are using this library. You should use NetBeans 7.0 if you need such support."
+                      OpenIDE-Module-Name="Swing Application Framework Library"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Bundles the Swing Application Framework library."
+                      OpenIDE-Module-Specification-Version="1.0"/>
+
+        </module>
+
+    </module_group>
+
+    <module_group name="Kenai">
+
+        <module autoload="true" codenamebase="org.netbeans.modules.kenai"
+                distribution="modules/extra/org-netbeans-modules-kenai.nbm" downloadsize="61835"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.kenai"
+                      OpenIDE-Module-Display-Category="Kenai" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.libs.smack &gt; 3.2, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0"
+                      OpenIDE-Module-Name="Kenai Framework API"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Kenai Framework API"
+                      OpenIDE-Module-Specification-Version="1.6"/>
+
+        </module>
+
+    </module_group>
+
+    <module_group name="Libraries">
+
+        <module autoload="true" codenamebase="org.netbeans.libs.junit4"
+                distribution="modules/extra/org-netbeans-libs-junit4.nbm" downloadsize="263072"
+                homepage="http://www.netbeans.org/" license="DCE70611" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="platform">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.libs.junit4"
+                      OpenIDE-Module-Display-Category="Libraries" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.4"
+                      OpenIDE-Module-Long-Description="Includes the JUnit 4.x unit testing library."
+                      OpenIDE-Module-Name="JUnit 4" OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Bundles the JUnit 4.x testing library."
+                      OpenIDE-Module-Specification-Version="1.14"/>
+
+        </module>
+
+        <module autoload="true" codenamebase="javax.wsdl" distribution="modules/extra/javax-wsdl.nbm"
+                downloadsize="8939" homepage="http://www.netbeans.org/" license="DCE70611" moduleauthor=""
+                needsrestart="false" releasedate="2012/11/07">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="javax.wsdl"
+                      OpenIDE-Module-Display-Category="Libraries" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Long-Description="Web Services Description Language for Java"
+                      OpenIDE-Module-Name="WSDL4J" OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Bundles the WSDL4J library."
+                      OpenIDE-Module-Specification-Version="1.6.0"/>
+
+        </module>
+
+    </module_group>
+
+    <module_group name="Management">
+
+        <module codenamebase="org.netbeans.modules.jconsole"
+                distribution="modules/extra/org-netbeans-modules-jconsole.nbm" downloadsize="114887"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07">
+            <manifest AutoUpdate-Show-In-Client="true" OpenIDE-Module="org.netbeans.modules.jconsole/1"
+                      OpenIDE-Module-Display-Category="Management" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.5"
+                      OpenIDE-Module-Long-Description="NetBeans JConsole module: Sun JDK 5 and 6 Monitoring and Management support. Debug and run applications with JConsole.&#10; &#10;IMPORTANT NOTE: This module runs only on Sun JDK."
+                      OpenIDE-Module-Module-Dependencies="org.apache.tools.ant.module/3 &gt; 3.14.1, org.netbeans.api.java/1 &gt; 1.18, org.netbeans.api.java.classpath/1 &gt; 1.0, org.netbeans.api.xml/1, org.netbeans.libs.javacapi &gt; 0.5, org.netbeans.modules.extexecution/2 &gt; 1.17, org.netbeans.modules.java.platform/1 &gt; 1.9, org.netbeans.modules.java.project/1 &gt; 1.3, org.netbeans.modules.java.source &gt; 0.1, org.netbeans.modules.jmx.common/1 &gt; 1.0, org.netbeans.modules.options.api/1 &gt; 1.4, org.netbeans.modules.project.ant/1 &gt; 1.3, org.netbeans.modules.projectapi/1 &gt; 1.17, org.netbeans.modules.projectuiapi/1 &gt; 1.4, org.openide.awt &gt; 6, org.openide.dialogs &gt; 7.8, org.openide.execution &gt; 1.4, org.openide.filesystems &gt; 6, org.openide.io &gt; 1.3.1, org.openide.loaders &gt; 5.3, org.openide.modules &gt; 6, org.openide.nodes &gt; 6, org.openide.text &gt; 6.16, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0, org.openide.windows &gt; 6"
+                      OpenIDE-Module-Name="JConsole" OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="JConsole module" OpenIDE-Module-Specification-Version="1.3"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.jmx" distribution="modules/extra/org-netbeans-modules-jmx.nbm"
+                downloadsize="216899" homepage="http://www.netbeans.org/" license="8B813426" moduleauthor=""
+                needsrestart="false" releasedate="2012/11/07">
+            <manifest AutoUpdate-Show-In-Client="true" OpenIDE-Module="org.netbeans.modules.jmx/3"
+                      OpenIDE-Module-Display-Category="Management" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.5"
+                      OpenIDE-Module-Long-Description="NetBeans JMX Module: JMX MBeans and JMX Manager development wizard. &#10; &#10;IMPORTANT NOTE: Starting from JMX NetBeans module version 3.1, the JConsole and Monitoring and Management features have been externalized into a separate module, named JConsole module."
+                      OpenIDE-Module-Module-Dependencies="org.apache.tools.ant.module/3 &gt; 3.14.1, org.netbeans.api.java/1 &gt; 1.18, org.netbeans.api.java.classpath/1 &gt; 1.0, org.netbeans.api.xml/1, org.netbeans.libs.javacapi &gt; 0.5, org.netbeans.modules.java.platform/1 &gt; 1.9, org.netbeans.modules.java.project/1 &gt; 1.3, org.netbeans.modules.java.source &gt; 0.67, org.netbeans.modules.jmx.common/1 &gt; 1.0, org.netbeans.modules.options.api/1 &gt; 1.4, org.netbeans.modules.project.ant/1 &gt; 1.3, org.netbeans.modules.projectapi/1 &gt; 1.3, org.netbeans.modules.projectuiapi/1 &gt; 1.4, org.openide.awt &gt; 6, org.openide.dialogs &gt; 7.8, org.openide.execution &gt; 1.4, org.openide.filesystems &gt; 7.19, org.openide.io &gt; 1.3.1, org.openide.loaders &gt; 5.3, org.openide.modules &gt; 6, org.openide.nodes &gt; 6, org.openide.options &gt; 6, org.openide.text &gt; 6.16, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0, org.openide.windows &gt; 6"
+                      OpenIDE-Module-Name="JMX" OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="JMX Wizard module" OpenIDE-Module-Specification-Version="3.4"/>
+
+        </module>
+
+        <module autoload="true" codenamebase="org.netbeans.modules.jmx.common"
+                distribution="modules/extra/org-netbeans-modules-jmx-common.nbm" downloadsize="27698"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.jmx.common/1"
+                      OpenIDE-Module-Display-Category="Management" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Long-Description="Common classes for JMX and JConsole NetBeans modules."
+                      OpenIDE-Module-Module-Dependencies="org.apache.tools.ant.module/3 &gt; 3.29, org.netbeans.api.java/1 &gt; 1.18, org.netbeans.api.java.classpath/1 &gt; 1.0, org.netbeans.modules.java.platform/1 &gt; 1.10, org.netbeans.modules.java.project/1 &gt; 1.15, org.netbeans.modules.project.ant/1 &gt; 1.19, org.netbeans.modules.projectapi/1 &gt; 1.17, org.netbeans.modules.projectuiapi/1 &gt; 1.27, org.openide.awt &gt; 7.33, org.openide.dialogs &gt; 7.8, org.openide.execution &gt; 1.11, org.openide.filesystems &gt; 7.8, org.openide.loaders &gt; 6.9, org.openide.modules &gt; 7.6, org.openide.nodes &gt; 7.23, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0"
+                      OpenIDE-Module-Name="jmx.common" OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Common classes for JMX and JConsole NetBeans modules"
+                      OpenIDE-Module-Specification-Version="1.2"/>
+
+        </module>
+
+    </module_group>
+
+    <module_group name="Mobility">
+
+        <module codenamebase="org.netbeans.modules.vmd.componentssupport"
+                distribution="modules/extra/org-netbeans-modules-vmd-componentssupport.nbm" downloadsize="66176"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="mobility">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.vmd.componentssupport"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Long-Description="Java ME Visual Designer component creation assistant"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.api.visual &gt; 2.26, org.netbeans.modules.apisupport.ant &gt; 2.45, org.netbeans.modules.options.api/1 &gt; 1.29, org.netbeans.modules.options.java &gt; 1.0, org.netbeans.modules.project.ant/1 &gt; 1.20, org.netbeans.modules.project.libraries/1 &gt; 1.19, org.netbeans.modules.projectapi/1 &gt; 1.15, org.netbeans.modules.projectuiapi/1 &gt; 1.30, org.netbeans.modules.queries/1 &gt; 1.13, org.netbeans.modules.vmd.midp &gt; 1.2, org.openide.awt &gt; 7.1, org.openide.dialogs &gt; 7.8, org.openide.filesystems &gt; 7.19, org.openide.loaders &gt; 6.9, org.openide.modules &gt; 7.7, org.openide.nodes &gt; 7.4, org.openide.text &gt; 6.19, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0"
+                      OpenIDE-Module-Name="Components Support"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Java ME Visual Designer - components creation"
+                      OpenIDE-Module-Specification-Version="1.17"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.mvd" distribution="modules/extra/org-netbeans-modules-mvd.nbm"
+                downloadsize="17801" homepage="http://www.netbeans.org/" license="8B813426" moduleauthor=""
+                needsrestart="false" releasedate="2012/11/07" targetcluster="mobility">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.mvd/2"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Long-Description="Java Mobile Edition Visual Editor allows user to edit screens and MIDlets flow"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.modules.mobility.licensing &gt; 1.0"
+                      OpenIDE-Module-Name="Java ME Visual Editor"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Java Mobile Edition Visual Editor"
+                      OpenIDE-Module-Specification-Version="1.16"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.mobility.midpexamples"
+                distribution="modules/extra/org-netbeans-modules-mobility-midpexamples.nbm" downloadsize="2890962"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.mobility.midpexamples"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.4"
+                      OpenIDE-Module-Long-Description="This module provides a lot of various MIDP examples available through Examples Setup Wizard."
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.api.mobility &gt; 8.0, org.netbeans.modules.mobility.licensing &gt; 1.0"
+                      OpenIDE-Module-Name="MIDP Wireless Examples"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Provides a lot of MIDP examples."
+                      OpenIDE-Module-Specification-Version="1.18"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.vmd.components.midp"
+                distribution="modules/extra/org-netbeans-modules-vmd-components-midp.nbm" downloadsize="210753"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="mobility">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.vmd.components.midp/2"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.4"
+                      OpenIDE-Module-Long-Description="Provides basic set of NetBeans MIDP custom components."
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.modules.mobility.licensing &gt; 1.0"
+                      OpenIDE-Module-Name="NetBeans MIDP Components"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Provides basic set of NetBeans MIDP custom components."
+                      OpenIDE-Module-Specification-Version="1.16"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.vmd.components.midp.pda"
+                distribution="modules/extra/org-netbeans-modules-vmd-components-midp-pda.nbm" downloadsize="69369"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="mobility">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.vmd.components.midp.pda/2"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Long-Description="JSR 75: Accessing the PIM database and File system custom components."
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.modules.mobility.licensing &gt; 1.0"
+                      OpenIDE-Module-Name="NetBeans MIDP Components PDA"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="JSR 75: Accessing the PIM database and File system custom components."
+                      OpenIDE-Module-Specification-Version="1.16"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.vmd.components.svg"
+                distribution="modules/extra/org-netbeans-modules-vmd-components-svg.nbm" downloadsize="429867"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="mobility">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.vmd.components.svg/2"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.modules.mobility.licensing &gt; 1.0"
+                      OpenIDE-Module-Name="NetBeans MIDP Components SVG"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Specification-Version="1.16"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.vmd.components.midp.wma"
+                distribution="modules/extra/org-netbeans-modules-vmd-components-midp-wma.nbm" downloadsize="61221"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="mobility">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.vmd.components.midp.wma/2"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Long-Description="Wireless Messaging API (WMA) custom components."
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.modules.mobility.licensing &gt; 1.0"
+                      OpenIDE-Module-Name="NetBeans MIDP components WMA"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Wireless Messaging API (WMA) custom components."
+                      OpenIDE-Module-Specification-Version="1.16"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.mobility.databindingme"
+                distribution="modules/extra/org-netbeans-modules-mobility-databindingme.nbm" downloadsize="579280"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="mobility">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.mobility.databindingme/2"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.4"
+                      OpenIDE-Module-Long-Description="Provides runtime libraries for databinding on mobile devices."
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.modules.mobility.licensing &gt; 1.0"
+                      OpenIDE-Module-Name="NetBeans Mobility DataBinding Library"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Provides runtime libraries for databinding on mobile devices."
+                      OpenIDE-Module-Specification-Version="1.16"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.mobility.proguard"
+                distribution="modules/extra/org-netbeans-modules-mobility-proguard.nbm" downloadsize="175557"
+                homepage="http://www.netbeans.org/" license="81EE09A8" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07">
+            <manifest AutoUpdate-Show-In-Client="true" OpenIDE-Module="org.netbeans.modules.mobility.proguard"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.4"
+                      OpenIDE-Module-Long-Description="Provides ProGuard Obfuscator for Java ME extensions to Ant."
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.api.mobility &gt; 8.0, org.netbeans.modules.mobility.licensing &gt; 1.0"
+                      OpenIDE-Module-Name="ProGuard Obfuscator Library"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Provides ProGuard Obfuscator for Java ME extensions to Ant."
+                      OpenIDE-Module-Specification-Version="1.13"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.vmd.kit"
+                distribution="modules/extra/org-netbeans-modules-vmd-kit.nbm" downloadsize="68415"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="mobility">
+            <manifest AutoUpdate-Show-In-Client="true" OpenIDE-Module="org.netbeans.modules.vmd.kit"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.4"
+                      OpenIDE-Module-Long-Description="The Visual Mobile Designer enables drag and drop visual design of a Java ME application flow and GUI. The VMD automatically creates Java code to implement your design."
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.modules.mobility.databindingme/2 &gt; 1.1, org.netbeans.modules.mvd/2 &gt; 1.1, org.netbeans.modules.vmd.analyzer &gt; 1.0, org.netbeans.modules.vmd.codegen &gt; 1.0, org.netbeans.modules.vmd.components.midp/2 &gt; 1.1, org.netbeans.modules.vmd.components.midp.pda/2 &gt; 1.1, org.netbeans.modules.vmd.components.midp.wma/2 &gt; 1.1, org.netbeans.modules.vmd.components.svg/2 &gt; 1.1, org.netbeans.modules.vmd.componentssupport &gt; 1.2, org.netbeans.modules.vmd.examples &gt; 1.0, org.netbeans.modules.vmd.flow &gt; 1.0, org.netbeans.modules.vmd.game &gt; 1.0, org.netbeans.modules.vmd.inspector &gt; 1.0, org.netbeans.modules.vmd.io &gt; 1.1, org.netbeans.modules.vmd.io.javame &gt; 1.0, org.netbeans.modules.vmd.midp &gt; 1.0, org.netbeans.modules.vmd.midp.converter &gt; 1.0, org.netbeans.modules.vmd.midpnb &gt; 1.0, org.netbeans.modules.vmd.model &gt; 1.0, org.netbeans.modules.vmd.palette &gt; 1.1, org.netbeans.modules.vmd.properties &gt; 1.0, org.netbeans.modules.vmd.screen &gt; 1.0, org.netbeans.modules.vmd.structure &gt; 1.0, org.netbeans.modules.javahelp/1 &gt; 1.0"
+                      OpenIDE-Module-Name="Visual Mobile Designer"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Support for visual development in JavaME."
+                      OpenIDE-Module-Specification-Version="1.16"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.vmd.analyzer"
+                distribution="modules/extra/org-netbeans-modules-vmd-analyzer.nbm" downloadsize="21929"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="mobility">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.vmd.analyzer"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.core.multiview/1 &gt; 1.9, org.netbeans.modules.vmd.io &gt; 1.0, org.netbeans.modules.vmd.model &gt; 1.0, org.openide.awt &gt; 6.8.0.1, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0, org.netbeans.modules.mobility.licensing &gt; 1.0"
+                      OpenIDE-Module-Name="VMD Analyzer" OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Visual Mobile Designer - Analyzer"
+                      OpenIDE-Module-Specification-Version="1.15"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.vmd.codegen"
+                distribution="modules/extra/org-netbeans-modules-vmd-codegen.nbm" downloadsize="26055"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="mobility">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.vmd.codegen"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.modules.editor.guards/1 &gt; 1.0, org.netbeans.modules.mobility.licensing &gt; 1.0, org.netbeans.modules.vmd.io &gt; 1.0, org.netbeans.modules.vmd.model &gt; 1.0, org.openide.text &gt; 6.16, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0"
+                      OpenIDE-Module-Name="VMD Code Generator"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Visual Mobile Designer - Code Generator"
+                      OpenIDE-Module-Specification-Version="1.15"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.vmd.examples"
+                distribution="modules/extra/org-netbeans-modules-vmd-examples.nbm" downloadsize="101481"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="mobility">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.vmd.examples"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Long-Description="This module provides various MIDP examples available through Examples Setup Wizard."
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.api.mobility &gt; 8.15, org.netbeans.modules.mobility.licensing &gt; 1.15, org.netbeans.modules.mobility.midpexamples &gt; 1.17"
+                      OpenIDE-Module-Name="VMD Examples" OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Provides some VMD examples."
+                      OpenIDE-Module-Specification-Version="1.0"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.vmd.flow"
+                distribution="modules/extra/org-netbeans-modules-vmd-flow.nbm" downloadsize="37884"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="mobility">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.vmd.flow"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.api.visual &gt; 2.0, org.netbeans.core.multiview/1 &gt; 1.7, org.netbeans.modules.mobility.licensing &gt; 1.0, org.netbeans.modules.vmd.io &gt; 1.0, org.netbeans.modules.vmd.model &gt; 1.0, org.netbeans.modules.vmd.palette &gt; 1.0, org.netbeans.spi.palette/1 &gt; 1.10, org.openide.actions &gt; 6.6.0.1, org.openide.awt &gt; 6.7, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0"
+                      OpenIDE-Module-Name="VMD Flow Designer"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Visual Mobile Designer - Flow Designer"
+                      OpenIDE-Module-Specification-Version="1.15"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.vmd.game"
+                distribution="modules/extra/org-netbeans-modules-vmd-game.nbm" downloadsize="148524"
+                homepage="www.netbeans.org" license="8B813426" moduleauthor="Karel Herink" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="mobility">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.vmd.game"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Long-Description="Visual editing support for MIDP 2.0 Game API including creation and editing of Sprites, TiledLayers and their arrangement into scenes."
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.libs.javacapi &gt; 0.7, org.netbeans.modules.java.source &gt; 0.38, org.netbeans.modules.mobility.licensing &gt; 1.0, org.netbeans.modules.projectapi/1 &gt; 1.13, org.netbeans.modules.vmd.codegen &gt; 1.0, org.netbeans.modules.vmd.io &gt; 1.0, org.netbeans.modules.vmd.midp &gt; 1.0, org.netbeans.modules.vmd.model &gt; 1.0, org.netbeans.modules.vmd.properties &gt; 1.0, org.netbeans.spi.navigator/1 &gt; 1.2.1, org.openide.awt &gt; 6.7.1, org.openide.dialogs &gt; 6.5.1, org.openide.filesystems &gt; 6.5, org.openide.loaders &gt; 6.0, org.openide.text &gt; 6.21, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0, org.openide.windows &gt; 6.5.1"
+                      OpenIDE-Module-Name="VMD Game Builder" OpenIDE-Module-Needs="javax.script.ScriptEngine.freemarker"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Visual editing support for MIDP 2.0 Game API"
+                      OpenIDE-Module-Specification-Version="1.15"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.vmd.inspector"
+                distribution="modules/extra/org-netbeans-modules-vmd-inspector.nbm" downloadsize="37522"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="mobility">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.vmd.inspector"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.modules.mobility.licensing &gt; 1.0, org.netbeans.modules.vmd.io &gt; 1.0, org.netbeans.modules.vmd.model &gt; 1.0, org.netbeans.modules.vmd.properties &gt; 1.0, org.netbeans.spi.navigator/1 &gt; 1.4, org.openide.awt &gt; 6.8.0.1, org.openide.dialogs &gt; 7.1, org.openide.explorer &gt; 6.8, org.openide.filesystems &gt; 7.19, org.openide.loaders &gt; 5.10, org.openide.nodes &gt; 6.8, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0, org.openide.windows &gt; 6.16"
+                      OpenIDE-Module-Name="VMD Inspector" OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Visual Mobile Designer - Inspector"
+                      OpenIDE-Module-Specification-Version="1.15"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.vmd.io" distribution="modules/extra/org-netbeans-modules-vmd-io.nbm"
+                downloadsize="36980" homepage="http://www.netbeans.org/" license="8B813426" moduleauthor=""
+                needsrestart="false" releasedate="2012/11/07" targetcluster="mobility">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.vmd.io"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.core.multiview/1 &gt; 1.7, org.netbeans.modules.editor.fold/1 &gt; 1.6, org.netbeans.modules.editor.guards/1 &gt; 1.0, org.netbeans.modules.java.project/1 &gt; 1.10, org.netbeans.modules.java.source &gt; 0.1, org.netbeans.modules.mobility.licensing &gt; 1.0, org.netbeans.modules.projectapi/1 &gt; 1.8, org.netbeans.modules.vmd.model &gt; 1.0, org.netbeans.spi.navigator/1 &gt; 1.3, org.openide.actions &gt; 6.4, org.openide.awt &gt; 6.6, org.openide.dialogs &gt; 7.5, org.openide.explorer &gt; 6.9, org.openide.filesystems &gt; 6.3, org.openide.loaders &gt; 5.8, org.openide.nodes &gt; 6.6, org.openide.text &gt; 6.16, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0, org.openide.windows &gt; 6.4"
+                      OpenIDE-Module-Name="VMD IO" OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Visual Mobile Designer - Input Output"
+                      OpenIDE-Module-Specification-Version="1.16"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.vmd.io.javame"
+                distribution="modules/extra/org-netbeans-modules-vmd-io-javame.nbm" downloadsize="27801"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="mobility">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.vmd.io.javame"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.api.mobility &gt; 8.0, org.netbeans.core.multiview/1 &gt; 1.7, org.netbeans.modules.editor.guards/1 &gt; 1.0, org.netbeans.modules.java.platform/1 &gt; 1.9, org.netbeans.modules.java.project/1 &gt; 1.10, org.netbeans.modules.java.source &gt; 0.21, org.netbeans.modules.mobility.cldcplatform &gt; 1.2, org.netbeans.modules.mobility.editor &gt; 1.1.2, org.netbeans.modules.mobility.licensing &gt; 1.0, org.netbeans.modules.mobility.project &gt; 1.2.0, org.netbeans.modules.project.ant/1 &gt; 1.15, org.netbeans.modules.projectapi/1 &gt; 1.8, org.netbeans.modules.vmd.io &gt; 1.0, org.netbeans.modules.vmd.model &gt; 1.0, org.netbeans.spi.navigator/1 &gt; 1.3, org.netbeans.spi.palette/1 &gt; 1.7, org.openide.actions &gt; 6.4, org.openide.awt &gt; 6.6, org.openide.dialogs &gt; 7.5, org.openide.explorer &gt; 6.9, org.openide.filesystems &gt; 7.58, org.openide.loaders &gt; 7.0, org.openide.modules &gt; 7.2, org.openide.nodes &gt; 6.6, org.openide.text &gt; 6.16, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0, org.openide.windows &gt; 6.4"
+                      OpenIDE-Module-Name="VMD IO Java ME"
+                      OpenIDE-Module-Requires="org.netbeans.api.editor.guards.Java, org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Visual Mobile Designer - Java ME Communication IO Implementation"
+                      OpenIDE-Module-Specification-Version="1.15"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.vmd.midp"
+                distribution="modules/extra/org-netbeans-modules-vmd-midp.nbm" downloadsize="242785"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="mobility">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.vmd.midp"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.api.java/1 &gt; 1.18, org.netbeans.api.java.classpath/1 &gt; 1.0, org.netbeans.api.mobility &gt; 8.0, org.netbeans.api.visual &gt; 2.0, org.netbeans.libs.javacapi &gt; 0.5.1, org.netbeans.modules.editor.guards/1 &gt; 1.0, org.netbeans.modules.editor.lib/3 &gt; 3.1, org.netbeans.modules.editor.lib2/1 &gt; 1.9, org.netbeans.modules.java.platform/1 &gt; 1.9, org.netbeans.modules.java.project/1 &gt; 1.10, org.netbeans.modules.java.source &gt; 0.1, org.netbeans.modules.mobility.cldcplatform &gt; 1.1.2, org.netbeans.modules.mobility.licensing &gt; 1.0, org.netbeans.modules.mobility.project &gt; 1.2.0, org.netbeans.modules.project.ant/1 &gt; 1.15, org.netbeans.modules.project.libraries/1 &gt; 1.14, org.netbeans.modules.projectapi/1 &gt; 1.10, org.netbeans.modules.projectuiapi/1 &gt; 1.15.0.5, org.netbeans.modules.refactoring.api &gt; 1.5, org.netbeans.modules.vmd.analyzer &gt; 1.0, org.netbeans.modules.vmd.codegen &gt; 1.0, org.netbeans.modules.vmd.flow &gt; 1.0, org.netbeans.modules.vmd.inspector &gt; 1.0, org.netbeans.modules.vmd.io &gt; 1.0, org.netbeans.modules.vmd.io.javame &gt; 1.0, org.netbeans.modules.vmd.model &gt; 1.0, org.netbeans.modules.vmd.palette &gt; 1.0, org.netbeans.modules.vmd.properties &gt; 1.0, org.netbeans.modules.vmd.screen &gt; 1.0, org.netbeans.spi.palette/1 &gt; 1.10, org.openide.actions &gt; 6.6.0.1, org.openide.awt &gt; 6.8.0.1, org.openide.dialogs &gt; 7.8, org.openide.explorer &gt; 6.8, org.openide.filesystems &gt; 7.19, org.openide.loaders &gt; 5.10, org.openide.modules &gt; 7.0, org.openide.nodes &gt; 6.8.0.1, org.openide.text &gt; 6.16, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0, org.openide.windows &gt; 6.7"
+                      OpenIDE-Module-Name="VMD MIDP" OpenIDE-Module-Needs="javax.script.ScriptEngine.freemarker"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Visual Mobile Designer - MIDP"
+                      OpenIDE-Module-Specification-Version="1.16"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.vmd.midpnb"
+                distribution="modules/extra/org-netbeans-modules-vmd-midpnb.nbm" downloadsize="133450"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="mobility">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.vmd.midpnb"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.api.java/1 &gt; 1.18, org.netbeans.api.java.classpath/1 &gt; 1.0, org.netbeans.api.visual &gt; 2.18, org.netbeans.libs.javacapi &gt; 0.5, org.netbeans.modules.editor.guards/1 &gt; 1.1, org.netbeans.modules.java.source &gt; 0.4, org.netbeans.modules.mobility.svgcore &gt; 1.1, org.netbeans.modules.projectapi/1 &gt; 1.12, org.netbeans.modules.svg.perseus &gt; 1.0, org.netbeans.modules.vmd.codegen &gt; 1.0, org.netbeans.modules.vmd.flow &gt; 1.0, org.netbeans.modules.vmd.inspector &gt; 1.0, org.netbeans.modules.vmd.io &gt; 1.0, org.netbeans.modules.vmd.midp &gt; 1.0, org.netbeans.modules.vmd.model &gt; 1.0, org.netbeans.modules.vmd.palette &gt; 1.0, org.netbeans.modules.vmd.properties &gt; 1.0, org.netbeans.modules.vmd.screen &gt; 1.0, org.openide.actions &gt; 6.9, org.openide.awt &gt; 6.8, org.openide.dialogs &gt; 7.5, org.openide.explorer &gt; 6.8, org.openide.filesystems &gt; 7.19, org.openide.loaders &gt; 5.10, org.openide.nodes &gt; 7.3, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0"
+                      OpenIDE-Module-Name="VMD MIDP NB" OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Visual Mobile Designer - MIDP NetBeans Components"
+                      OpenIDE-Module-Specification-Version="1.15"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.vmd.model"
+                distribution="modules/extra/org-netbeans-modules-vmd-model.nbm" downloadsize="58795"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="mobility">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.vmd.model"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.modules.mobility.licensing &gt; 1.0, org.openide.actions &gt; 6.6.0.1, org.openide.dialogs &gt; 7.1, org.openide.awt &gt; 6.8.0.1, org.openide.filesystems &gt; 7.19, org.openide.loaders &gt; 5.11, org.openide.nodes &gt; 6.6, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0"
+                      OpenIDE-Module-Name="VMD Model" OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Visual Mobile Designer - Model"
+                      OpenIDE-Module-Specification-Version="1.15"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.vmd.palette"
+                distribution="modules/extra/org-netbeans-modules-vmd-palette.nbm" downloadsize="27977"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="mobility">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.vmd.palette"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.api.java/1 &gt; 1.18, org.netbeans.api.java.classpath/1 &gt; 1.0, org.netbeans.modules.java.project/1 &gt; 1.12, org.netbeans.modules.java.source &gt; 0.14, org.netbeans.modules.mobility.licensing &gt; 1.0, org.netbeans.modules.projectapi/1 &gt; 1.11, org.netbeans.modules.vmd.io &gt; 1.0, org.netbeans.modules.vmd.model &gt; 1.0, org.netbeans.spi.palette/1 &gt; 1.6, org.openide.awt &gt; 6.8.0.1, org.openide.dialogs &gt; 7.1, org.openide.filesystems &gt; 7.58, org.openide.loaders &gt; 7.0, org.openide.nodes &gt; 6.8, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0"
+                      OpenIDE-Module-Name="VMD Palette" OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Visual Mobile Designer - Palette"
+                      OpenIDE-Module-Specification-Version="1.16"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.vmd.properties"
+                distribution="modules/extra/org-netbeans-modules-vmd-properties.nbm" downloadsize="29407"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="mobility">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.vmd.properties"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.modules.mobility.licensing &gt; 1.0, org.netbeans.modules.vmd.io &gt; 1.0, org.netbeans.modules.vmd.model &gt; 1.0, org.openide.actions &gt; 6.6.0.1, org.openide.awt &gt; 6.8, org.openide.dialogs &gt; 7.3, org.openide.explorer &gt; 6.8, org.openide.loaders &gt; 6.4, org.openide.nodes &gt; 6.8, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0, org.openide.windows &gt; 6.14"
+                      OpenIDE-Module-Name="VMD Properties" OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="VMD Properties" OpenIDE-Module-Specification-Version="1.15"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.vmd.screen"
+                distribution="modules/extra/org-netbeans-modules-vmd-screen.nbm" downloadsize="40581"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="mobility">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.vmd.screen"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.core.multiview/1 &gt; 1.7, org.netbeans.modules.project.ant/1 &gt; 1.15, org.netbeans.modules.projectapi/1 &gt; 1.13, org.netbeans.modules.vmd.io &gt; 1.0, org.netbeans.modules.vmd.io.javame &gt; 1.0, org.netbeans.modules.vmd.model &gt; 1.0, org.openide.actions &gt; 6.6.0.1, org.openide.awt &gt; 6.7, org.openide.dialogs &gt; 7.1, org.openide.loaders &gt; 6.4, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0, org.openide.windows &gt; 6.12"
+                      OpenIDE-Module-Name="VMD Screen Designer"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Visual Mobile Designer - Screen Designer"
+                      OpenIDE-Module-Specification-Version="1.15"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.vmd.structure"
+                distribution="modules/extra/org-netbeans-modules-vmd-structure.nbm" downloadsize="23690"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07" targetcluster="mobility">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.vmd.structure"
+                      OpenIDE-Module-Display-Category="Mobility" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.api.visual &gt; 2.0, org.netbeans.core.multiview/1 &gt; 1.7, org.netbeans.modules.vmd.io &gt; 1.0, org.netbeans.modules.vmd.model &gt; 1.0, org.openide.awt &gt; 6.6, org.openide.filesystems &gt; 6.3, org.openide.loaders &gt; 5.8, org.openide.nodes &gt; 6.6, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0, org.openide.windows &gt; 6.4, org.netbeans.modules.mobility.licensing &gt; 1.0"
+                      OpenIDE-Module-Name="VMD Structure" OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="VMD Structure Browser"
+                      OpenIDE-Module-Specification-Version="1.15"/>
+
+        </module>
+
+    </module_group>
+
+    <module_group name="Team">
+
+        <module codenamebase="org.netbeans.modules.bugtracking.kenai"
+                distribution="modules/extra/org-netbeans-modules-bugtracking-kenai.nbm" downloadsize="29796"
+                eager="true" homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07">
+            <manifest AutoUpdate-Essential-Module="true" AutoUpdate-Show-In-Client="false"
+                      OpenIDE-Module="org.netbeans.modules.bugtracking.kenai" OpenIDE-Module-Display-Category="Team"
+                      OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.api.progress/1 &gt; 1.18, org.netbeans.modules.autoupdate.services &gt; 1.17, org.netbeans.modules.bugtracking &gt; 1.29, org.netbeans.modules.kenai &gt; 1.2, org.netbeans.modules.kenai.ui &gt; 1.10, org.netbeans.modules.projectapi/1 &gt; 1.29, org.netbeans.modules.projectuiapi/1 &gt; 1.41, org.netbeans.modules.team.ui &gt; 1.5, org.openide.awt &gt; 7.21, org.openide.dialogs &gt; 7.14, org.openide.filesystems &gt; 7.35, org.openide.loaders &gt; 7.12, org.openide.nodes &gt; 7.14, org.openide.util &gt; 8.1, org.openide.util.lookup &gt; 8.1"
+                      OpenIDE-Module-Name="Issue Tracking Kenai Integration"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Bridges the kenai and bugtracking funtionality"
+                      OpenIDE-Module-Specification-Version="1.9"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.kenai.ui"
+                distribution="modules/extra/org-netbeans-modules-kenai-ui.nbm" downloadsize="196406"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.kenai.ui"
+                      OpenIDE-Module-Display-Category="Team" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.api.java.classpath/1 &gt; 1.20, org.netbeans.api.progress/1 &gt; 1.13, org.netbeans.core.ide/1 &gt; 1.17, org.netbeans.libs.smack &gt; 3.2, org.netbeans.libs.swingx/1 &gt; 1.1, org.netbeans.modules.editor/3 &gt; 1.53, org.netbeans.modules.editor.lib2/1 &gt; 1.12, org.netbeans.modules.favorites/1 &gt; 1.16, org.netbeans.modules.javahelp/1 &gt; 2.20, org.netbeans.modules.kenai &gt; 1.3, org.netbeans.modules.keyring &gt; 1.0, org.netbeans.modules.mercurial &gt; 1.8.1, org.netbeans.modules.options.api/1 &gt; 1.11, org.netbeans.modules.projectapi/1 &gt; 1.24, org.netbeans.modules.projectuiapi/1 &gt; 1.33, org.netbeans.modules.settings/1 &gt; 1.20, org.netbeans.modules.subversion &gt; 1.5.1, org.netbeans.modules.team.ui &gt; 1.5, org.netbeans.modules.versioning/1 &gt; 1.11, org.netbeans.modules.versioning.system.cvss/1 &gt; 1.12, org.openide.actions &gt; 6.11, org.openide.awt &gt; 7.24, org.openide.dialogs &gt; 7.10, org.openide.explorer &gt; 6.17, org.openide.filesystems &gt; 7.21, org.openide.loaders &gt; 7.5, org.openide.modules &gt; 7.21, org.openide.nodes &gt; 7.8, org.openide.text &gt; 6.46, org.openide.util &gt; 8.6, org.openide.util.lookup &gt; 8.0, org.openide.windows &gt; 6.25"
+                      OpenIDE-Module-Name="Kenai UI" OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Kenai UI" OpenIDE-Module-Specification-Version="1.10"/>
+
+        </module>
+
+        <module autoload="true" codenamebase="org.netbeans.modules.team.ui"
+                distribution="modules/extra/org-netbeans-modules-team-ui.nbm" downloadsize="73341"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.modules.team.ui"
+                      OpenIDE-Module-Display-Category="Team" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.core.ide/1 &gt; 1.17, org.netbeans.libs.swingx/1 &gt; 1.1, org.netbeans.modules.options.api/1 &gt; 1.11, org.netbeans.modules.projectapi/1 &gt; 1.47, org.netbeans.modules.projectui &gt; 1.36, org.netbeans.modules.projectuiapi/1 &gt; 1.58, org.openide.actions &gt; 6.11, org.openide.awt &gt; 7.24, org.openide.dialogs &gt; 7.10, org.openide.explorer &gt; 6.17, org.openide.filesystems &gt; 7.63, org.openide.loaders &gt; 7.39, org.openide.modules &gt; 7.21, org.openide.nodes &gt; 7.8, org.openide.util &gt; 8.6, org.openide.util.lookup &gt; 8.0, org.openide.windows &gt; 6.25"
+                      OpenIDE-Module-Name="Team UI" OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Team UI" OpenIDE-Module-Specification-Version="1.5"/>
+
+        </module>
+
+        <module codenamebase="org.netbeans.modules.versioning.kenai"
+                distribution="modules/extra/org-netbeans-modules-versioning-kenai.nbm" downloadsize="22138" eager="true"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07">
+            <manifest AutoUpdate-Essential-Module="true" AutoUpdate-Show-In-Client="false"
+                      OpenIDE-Module="org.netbeans.modules.versioning.kenai" OpenIDE-Module-Display-Category="Team"
+                      OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.modules.kenai &gt; 1.2, org.netbeans.modules.kenai.ui &gt; 1.10, org.netbeans.modules.projectapi/1 &gt; 1.29, org.netbeans.modules.projectuiapi/1 &gt; 1.41, org.netbeans.modules.team.ui &gt; 1.0, org.netbeans.modules.versioning.util &gt; 1.12.1, org.openide.filesystems &gt; 7.35, org.openide.util.lookup &gt; 8.1"
+                      OpenIDE-Module-Name="Versioning Kenai Integration"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Bridges the versioning and kenai funtionality"
+                      OpenIDE-Module-Specification-Version="1.4"/>
+
+        </module>
+
+    </module_group>
+
+    <module_group name="Testing Tools">
+
+        <module codenamebase="org.apache.jmeter.module" distribution="modules/extra/org-apache-jmeter-module.nbm"
+                downloadsize="12698820" eager="true" homepage="http://www.netbeans.org/" license="8A27AEF5"
+                moduleauthor="" needsrestart="false" releasedate="2012/11/07">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.apache.jmeter.module/1"
+                      OpenIDE-Module-Display-Category="Testing Tools"
+                      OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Long-Description="Provides a tight integration of Apache JMeter (2.4) into NB infrastructure. This plugin will install additional plugins - &quot;Load Generator&quot; and &quot;Profiler / Load Generator Bridge&quot;"
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.modules.loadgenerator/1 &gt; 1.6, org.netbeans.modules.projectapi/1 &gt; 1.13, org.netbeans.modules.projectuiapi/1 &gt; 1.24, org.openide.awt &gt; 6.11, org.openide.dialogs &gt; 7.8, org.openide.explorer &gt; 6.11, org.openide.filesystems &gt; 7.0, org.openide.io &gt; 1.11, org.openide.loaders &gt; 5.11, org.openide.modules &gt; 7.2, org.openide.nodes &gt; 6.9, org.openide.text &gt; 6.16, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0, org.openide.windows &gt; 6.8"
+                      OpenIDE-Module-Name="JMeter" OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="JMeter integration module"
+                      OpenIDE-Module-Specification-Version="1.3"/>
+
+        </module>
+
+        <module codenamebase="org.apache.jmeter.kit" distribution="modules/extra/org-apache-jmeter-kit.nbm"
+                downloadsize="16989" homepage="http://www.netbeans.org/" license="8B813426" moduleauthor=""
+                needsrestart="false" releasedate="2012/11/07">
+            <manifest AutoUpdate-Show-In-Client="true" OpenIDE-Module="org.apache.jmeter.kit/1"
+                      OpenIDE-Module-Display-Category="Testing Tools"
+                      OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Long-Description="This kit presents a high level module for easy installation of the JMeter load generator system into NetBeans IDE&#10;It will install also the following modules:&#10;* LoadGenerator&#10;* JMeter Module&#10;* Load Generator -&gt; Profiler Bridge"
+                      OpenIDE-Module-Module-Dependencies="org.apache.jmeter.module/1, org.netbeans.modules.loadgenerator/1, org.netbeans.modules.profiler.loadgen/1"
+                      OpenIDE-Module-Name="JMeter Kit" OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="JMeter load generator integration bundle"
+                      OpenIDE-Module-Specification-Version="1.1"/>
+
+        </module>
+
+    </module_group>
+
+    <module_group name="Tools">
+
+        <module codenamebase="org.netbeans.modules.loadgenerator"
+                distribution="modules/extra/org-netbeans-modules-loadgenerator.nbm" downloadsize="63071"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07">
+            <manifest AutoUpdate-Show-In-Client="true" OpenIDE-Module="org.netbeans.modules.loadgenerator/1"
+                      OpenIDE-Module-Display-Category="Tools" OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.6"
+                      OpenIDE-Module-Long-Description="Provides a generic loadgenerator infastructure. Enables a unified access to all loadgenerator engines registered in the system."
+                      OpenIDE-Module-Module-Dependencies="org.netbeans.api.progress/1 &gt; 1.8, org.netbeans.core.ide/1 &gt; 1.15, org.netbeans.modules.projectapi/1 &gt; 1.12, org.netbeans.modules.projectuiapi/1 &gt; 1.24, org.netbeans.modules.queries/1 &gt; 1.10, org.openide.actions &gt; 6.6, org.openide.filesystems &gt; 7.0, org.openide.io &gt; 1.11, org.openide.loaders &gt; 6.6, org.openide.modules &gt; 7.2, org.openide.nodes &gt; 7.23, org.openide.util &gt; 8.0, org.openide.util.lookup &gt; 8.0"
+                      OpenIDE-Module-Name="Load Generator" OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="Generic load generation infrastructure"
+                      OpenIDE-Module-Specification-Version="1.9"/>
+
+        </module>
+
+    </module_group>
+
+    <module_group name="Version Control">
+
+        <module autoload="true" codenamebase="org.netbeans.lib.cvsclient"
+                distribution="modules/extra/org-netbeans-lib-cvsclient.nbm" downloadsize="96731"
+                homepage="http://www.netbeans.org/" license="8B813426" moduleauthor="" needsrestart="false"
+                releasedate="2012/11/07">
+            <manifest AutoUpdate-Show-In-Client="false" OpenIDE-Module="org.netbeans.lib.cvsclient/1"
+                      OpenIDE-Module-Display-Category="Version Control"
+                      OpenIDE-Module-Implementation-Version="201211062253"
+                      OpenIDE-Module-Java-Dependencies="Java &gt; 1.4"
+                      OpenIDE-Module-Long-Description="The CVS Client Library module implements the client side of CVS server connection. Local connections are not supported."
+                      OpenIDE-Module-Name="CVS Client Library"
+                      OpenIDE-Module-Requires="org.openide.modules.ModuleFormat1"
+                      OpenIDE-Module-Short-Description="A CVS client library, that substitutes the client side of the native CVS executable."
+                      OpenIDE-Module-Specification-Version="1.30"/>
+
+        </module>
+
+    </module_group>
+
+    <license name="34C96EB2" url="licenses/license.34C96EB2"/>
+    <license name="DCE70611" url="licenses/license.DCE70611"/>
+    <license name="5885A793" url="licenses/license.5885A793"/>
+    <license name="C571AB52" url="licenses/license.C571AB52"/>
+    <license name="8A27AEF5" url="licenses/license.8A27AEF5"/>
+    <license name="81EE09A8" url="licenses/license.81EE09A8"/>
+    <license name="8B813426" url="licenses/license.8B813426"/>
+    <license name="DF4AB1BE" url="licenses/license.DF4AB1BE"/>
+</module_updates>
+
