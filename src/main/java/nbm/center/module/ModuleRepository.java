@@ -37,14 +37,15 @@ public class ModuleRepository extends AbstractDAO<Module> {
         return new ByteArrayInputStream(modules.get(0).getFileContents());
     }
 
-    public void save(Module module) {
+    public Module save(Module module) {
         Module existingModule = findByCodenamebase(module.getCodenamebase());
         if (existingModule != null) {
             existingModule.setFileContents(module.getFileContents());
+            existingModule.setUpdateDate(module.getUpdateDate());
         } else {
             existingModule = module;
         }
-        persist(existingModule);
+        return persist(existingModule);
     }
 
     private Module findByCodenamebase(String codenamebase) {

@@ -16,6 +16,7 @@ package nbm.center.module;
 import com.google.common.io.ByteStreams;
 import nbm.center.RepositoryTest;
 import org.hibernate.SessionFactory;
+import org.joda.time.DateTime;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -33,11 +34,22 @@ public class ModuleRepositoryTest extends RepositoryTest {
     }
 
     @Test
+    public void save_updatesExistingRecordsUpdateDate() throws IOException {
+        DateTime now = new DateTime();
+        repository.save(module("code-name", now.minusDays(1), "data"));
+        DateTime result = repository.save(module("code-name", now, "updated-data")).getUpdateDate();
+
+        assertEquals(now.year(), result.year());
+        assertEquals(now.monthOfYear(), result.monthOfYear());
+        assertEquals(now.dayOfMonth(), result.dayOfMonth());
+    }
+
+    @Test
     public void save_updatesExistingRecords() throws IOException {
         repository.save(module("code-name", "data"));
-        repository.save(module("code-name", "updated-data"));
+        Module result = repository.save(module("code-name", "updated-data"));
 
-        assertEquals("updated-data", new String(ByteStreams.toByteArray(repository.findBinaryById(1))));
+        assertEquals("updated-data", new String(result.getFileContents()));
     }
 
     @Test
@@ -47,8 +59,7 @@ public class ModuleRepositoryTest extends RepositoryTest {
 
     @Test
     public void findBinaryById() throws IOException {
-        repository.save(module("x", "data"));
-        Integer id = (Integer) session.createQuery("select m.id from Module m").list().get(0);
+        Integer id = repository.save(module("x", "data")).getId();
 
         InputStream inputStream = repository.findBinaryById(id);
 
@@ -56,10 +67,16 @@ public class ModuleRepositoryTest extends RepositoryTest {
     }
 
     private Module module(String codenamebase, String data) {
+        DateTime updateDate = new DateTime();
+        return module(codenamebase, updateDate, data);
+    }
+
+    private Module module(String codenamebase, DateTime updateDate, String data) {
         Module module = new Module();
         module.setFileContents(data.getBytes());
         module.setCodenamebase(codenamebase);
         module.setInfoXml("info.xml");
+        module.setUpdateDate(updateDate);
         return module;
     }
 }

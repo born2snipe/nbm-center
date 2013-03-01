@@ -50,7 +50,9 @@ public class NbmFileBuilder {
     }
 
     private byte[] infoXml() {
-        String xml = "<module " +
+        String xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" +
+                "<!DOCTYPE module PUBLIC \"-//NetBeans//DTD Autoupdate Module Info 2.4//EN\" \"http://www.netbeans.org/dtds/autoupdate-info-2_4.dtd\">\n" +
+                "<module " +
                 "codenamebase=\"" + codebasename + "\" " +
                 "distribution=\"" + distributionPath + "\" " +
                 "downloadsize=\"442004\" " +

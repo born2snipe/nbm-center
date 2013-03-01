@@ -21,12 +21,14 @@ import com.yammer.dropwizard.hibernate.SessionFactoryFactory;
 import com.yammer.dropwizard.json.ObjectMapperFactory;
 import com.yammer.dropwizard.migrations.ManagedLiquibase;
 import com.yammer.dropwizard.validation.Validator;
+import nbm.center.catalog.CatalogEntry;
 import nbm.center.module.Module;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.context.internal.ManagedSessionContext;
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 
@@ -40,7 +42,16 @@ public abstract class RepositoryTest {
 
     @BeforeClass
     public static void init() {
-        sessionFactory = sessionFactory(NbmCenterConfiguration.class, "test.yml", Module.class);
+        sessionFactory = sessionFactory(
+                NbmCenterConfiguration.class,
+                "test.yml",
+                Module.class, CatalogEntry.class
+        );
+    }
+
+    @AfterClass
+    public static void done() {
+        sessionFactory.close();
     }
 
     @Before

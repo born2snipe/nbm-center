@@ -40,7 +40,7 @@ public class ModuleResource {
         return Response.ok().build();
     }
 
-    @Path("/{id}")
+    @Path("/{id}.nbm")
     @GET
     @Consumes
     @Produces(MediaType.APPLICATION_OCTET_STREAM)

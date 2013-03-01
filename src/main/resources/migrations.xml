@@ -29,6 +29,9 @@
             <column name="codenamebase" type="varchar(1024)">
                 <constraints nullable="false"/>
             </column>
+            <column name="updateDate" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
             <column name="infoXml" type="clob">
                 <constraints nullable="false"/>
             </column>

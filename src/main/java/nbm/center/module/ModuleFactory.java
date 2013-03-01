@@ -30,7 +30,7 @@ public class ModuleFactory {
     public Module build(InputStream input) {
         byte[] fileContents = readFileContents(input);
         String infoXml = readModuleInfoFrom(fileContents);
-        infoXml = updateDistributionPathOf(infoXml);
+        infoXml = removeNoLongerNeededXmlTags(infoXml);
 
         Module module = new Module();
         module.setCodenamebase(readCodebaseNameFrom(infoXml));
@@ -39,8 +39,9 @@ public class ModuleFactory {
         return module;
     }
 
-    private String updateDistributionPathOf(String infoXml) {
-        return infoXml.replaceAll("distribution=\".+?\"", "distribution=\"module/{id}\"");
+    private String removeNoLongerNeededXmlTags(String infoXml) {
+        return infoXml.replace("<?xml version=\"1.0\" encoding=\"UTF-8\"?>", "")
+                .replace("<!DOCTYPE module PUBLIC \"-//NetBeans//DTD Autoupdate Module Info 2.4//EN\" \"http://www.netbeans.org/dtds/autoupdate-info-2_4.dtd\">", "");
     }
 
     private String readModuleInfoFrom(byte[] fileContents) {

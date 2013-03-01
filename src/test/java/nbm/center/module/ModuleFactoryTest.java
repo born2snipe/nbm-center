@@ -17,7 +17,8 @@ import nbm.center.NbmFileBuilder;
 import org.junit.Before;
 import org.junit.Test;
 
-import static junit.framework.Assert.*;
+import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertFalse;
 
 public class ModuleFactoryTest {
 
@@ -32,12 +33,12 @@ public class ModuleFactoryTest {
 
     @Test
     public void build() {
-        nbmBuilder.codebasename("code-base").distributionPath("null/file.nbm");
+        nbmBuilder.codebasename("code-base");
 
         Module module = factory.build(nbmBuilder.toInputStream());
 
         assertEquals("code-base", module.getCodenamebase());
-        assertTrue(module.getInfoXml().contains("module/{id}"));
-        assertFalse(module.getInfoXml().contains("null/file.nbm"));
+        assertFalse(module.getInfoXml().contains("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"));
+        assertFalse(module.getInfoXml().contains("<!DOCTYPE module PUBLIC \"-//NetBeans//DTD Autoupdate Module Info 2.4//EN\" \"http://www.netbeans.org/dtds/autoupdate-info-2_4.dtd\">"));
     }
 }

@@ -11,27 +11,21 @@
  * distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and limitations under the License.
  */
-package nbm.center.module;
-
+package nbm.center.catalog;
 
 import org.joda.time.DateTime;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table
-public class Module {
+@Table(name = "module")
+public class CatalogEntry {
     @Id
-    @GeneratedValue
     private int id;
-
-    private byte[] fileContents;
-    private String codenamebase;
     private String infoXml;
-    private DateTime updateDate = new DateTime();
+    private DateTime updateDate;
 
     public int getId() {
         return id;
@@ -39,22 +33,6 @@ public class Module {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public void setFileContents(byte[] fileContents) {
-        this.fileContents = fileContents;
-    }
-
-    public byte[] getFileContents() {
-        return fileContents;
-    }
-
-    public void setCodenamebase(String codenamebase) {
-        this.codenamebase = codenamebase;
-    }
-
-    public String getCodenamebase() {
-        return codenamebase;
     }
 
     public String getInfoXml() {
@@ -65,11 +43,11 @@ public class Module {
         this.infoXml = infoXml;
     }
 
-    public void setUpdateDate(DateTime updateDate) {
-        this.updateDate = updateDate;
-    }
-
     public DateTime getUpdateDate() {
         return updateDate;
+    }
+
+    public void setUpdateDate(DateTime updateDate) {
+        this.updateDate = updateDate;
     }
 }
