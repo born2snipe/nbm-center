@@ -25,7 +25,8 @@ public class CatalogEntry {
     @Id
     private int id;
     private String infoXml;
-    private DateTime updateDate;
+    private DateTime updateDate = new DateTime();
+    private int fileSize;
 
     public int getId() {
         return id;
@@ -49,5 +50,13 @@ public class CatalogEntry {
 
     public void setUpdateDate(DateTime updateDate) {
         this.updateDate = updateDate;
+    }
+
+    public int getFileSize() {
+        return fileSize;
+    }
+
+    public void setFileSize(int fileSize) {
+        this.fileSize = fileSize;
     }
 }

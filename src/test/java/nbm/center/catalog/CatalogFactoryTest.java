@@ -32,6 +32,17 @@ public class CatalogFactoryTest {
     }
 
     @Test
+    public void build_useTheFileSizeAsTheDownloadSize() {
+        CatalogEntry entry = new CatalogEntry();
+        entry.setInfoXml("downloadsize=\"XXX\"");
+        entry.setFileSize(1234);
+
+        String catalogXml = factory.build(Arrays.asList(entry));
+
+        assertTrue(catalogXml.contains("downloadsize=\"1234\""));
+    }
+
+    @Test
     public void build_useTheEntryUpdateDateForTheCatalogTimestamp() {
         String catalogXml = factory.build(Arrays.asList(
                 entry(1, "", yesterday()),

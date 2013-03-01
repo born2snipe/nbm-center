@@ -50,6 +50,7 @@ public class ModuleRepositoryTest extends RepositoryTest {
         Module result = repository.save(module("code-name", "updated-data"));
 
         assertEquals("updated-data", new String(result.getFileContents()));
+        assertEquals("updated-data".length(), result.getFileSize());
     }
 
     @Test

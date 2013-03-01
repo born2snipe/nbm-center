@@ -32,6 +32,9 @@
             <column name="updateDate" type="timestamp">
                 <constraints nullable="false"/>
             </column>
+            <column name="fileSize" type="int">
+                <constraints nullable="false"/>
+            </column>
             <column name="infoXml" type="clob">
                 <constraints nullable="false"/>
             </column>

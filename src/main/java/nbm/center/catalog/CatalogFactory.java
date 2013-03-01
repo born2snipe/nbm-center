@@ -52,7 +52,9 @@ public class CatalogFactory {
     }
 
     private String makeModuleXmlFor(CatalogEntry catalogEntry) {
-        return catalogEntry.getInfoXml().replaceAll("distribution=\".+?\"", "distribution=\"module/" + catalogEntry.getId() + ".nbm\"");
+        return catalogEntry.getInfoXml()
+                .replaceAll("distribution=\".+?\"", "distribution=\"module/" + catalogEntry.getId() + ".nbm\"")
+                .replaceAll("downloadsize=\".+?\"", "downloadsize=\"" + catalogEntry.getFileSize() + "\"");
     }
 
     private String makeCatalogXmlEnding() {

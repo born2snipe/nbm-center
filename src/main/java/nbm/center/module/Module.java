@@ -32,6 +32,7 @@ public class Module {
     private String codenamebase;
     private String infoXml;
     private DateTime updateDate = new DateTime();
+    private int fileSize;
 
     public int getId() {
         return id;
@@ -43,6 +44,7 @@ public class Module {
 
     public void setFileContents(byte[] fileContents) {
         this.fileContents = fileContents;
+        this.fileSize = fileContents.length;
     }
 
     public byte[] getFileContents() {
@@ -71,5 +73,9 @@ public class Module {
 
     public DateTime getUpdateDate() {
         return updateDate;
+    }
+
+    public int getFileSize() {
+        return fileSize;
     }
 }
