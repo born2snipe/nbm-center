@@ -54,6 +54,12 @@ public class ModuleResource {
         return new InputStreamOutput(inputStream);
     }
 
+    @Path("/{id}.nbm")
+    @DELETE
+    public void delete(@PathParam("id") int id) {
+        repository.delete(id);
+    }
+
     public void setFactory(ModuleFactory factory) {
         this.factory = factory;
     }

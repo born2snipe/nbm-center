@@ -48,6 +48,12 @@ public class ModuleRepository extends AbstractDAO<Module> {
         return persist(existingModule);
     }
 
+    public void delete(int id) {
+        Query query = currentSession().createQuery("delete from Module m where m.id = ?");
+        query.setParameter(0, id);
+        query.executeUpdate();
+    }
+
     private Module findByCodenamebase(String codenamebase) {
         Query query = currentSession().createQuery("select m from Module m where m.codenamebase = ?");
         query.setParameter(0, codenamebase);

@@ -54,6 +54,15 @@ public class ModuleRepositoryTest extends RepositoryTest {
     }
 
     @Test
+    public void delete_successfully() throws IOException {
+        Module module = module("code-name", "data");
+        repository.save(module);
+
+        repository.delete(module.getId());
+        assertNull(repository.findBinaryById(module.getId()));
+    }
+
+    @Test
     public void findBinaryById_noMatchingModule() throws IOException {
         assertNull(repository.findBinaryById(-1));
     }
