@@ -22,10 +22,25 @@ import java.util.List;
 public class CatalogFactory {
     public String build(List<CatalogEntry> catalogEntries) {
         StringBuilder xmlBuilder = new StringBuilder();
-        xmlBuilder.append(makeCatalogXmlBeginning()).append("\n");
+        DateTime timestamp = findLatestUpdateDate(catalogEntries);
+        xmlBuilder.append(makeCatalogXmlBeginning(timestamp)).append("\n");
         xmlBuilder.append(makeCatalogXmlEntries(catalogEntries));
         xmlBuilder.append(makeCatalogXmlEnding());
         return xmlBuilder.toString();
+    }
+
+    private DateTime findLatestUpdateDate(List<CatalogEntry> catalogEntries) {
+        if (catalogEntries.isEmpty())
+            return new DateTime();
+
+        DateTime latestUpdate = catalogEntries.get(0).getUpdateDate();
+        for (int i = 1; i < catalogEntries.size(); i++) {
+            DateTime current = catalogEntries.get(i).getUpdateDate();
+            if (latestUpdate.isBefore(current)) {
+                latestUpdate = current;
+            }
+        }
+        return latestUpdate;
     }
 
     private String makeCatalogXmlEntries(List<CatalogEntry> catalogEntries) {
@@ -44,8 +59,8 @@ public class CatalogFactory {
         return "</module_updates>";
     }
 
-    private String makeCatalogXmlBeginning() {
-        String catalogTimestamp = makeCatalogTimestampFrom(new DateTime());
+    private String makeCatalogXmlBeginning(DateTime timestamp) {
+        String catalogTimestamp = makeCatalogTimestampFrom(timestamp);
         return "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n" +
                 "<!DOCTYPE module_updates PUBLIC \"-//NetBeans//DTD Autoupdate Catalog 2.7//EN\" \"http://www.netbeans.org/dtds/autoupdate-catalog-2_7.dtd\">\n" +
                 "<module_updates timestamp=\"" + catalogTimestamp + "\">";

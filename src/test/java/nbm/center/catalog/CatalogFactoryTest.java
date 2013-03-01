@@ -32,10 +32,31 @@ public class CatalogFactoryTest {
     }
 
     @Test
+    public void build_useTheEntryUpdateDateForTheCatalogTimestamp() {
+        String catalogXml = factory.build(Arrays.asList(
+                entry(1, "", yesterday()),
+                entry(2, "", today()),
+                entry(3, "", twoDaysAgo())
+        ));
+
+        assertTrue(catalogXml.contains("<module_updates timestamp=\"" + makeCatalogTimestampFrom(today()) + "\">"));
+    }
+
+    private DateTime today() {
+        return new DateTime();
+    }
+
+    private DateTime twoDaysAgo() {
+        return today().minusDays(2);
+    }
+
+    private DateTime yesterday() {
+        return today().minusDays(1);
+    }
+
+    @Test
     public void build_updatesTheModulesDistributionPath() {
-        CatalogEntry entry = new CatalogEntry();
-        entry.setId(100);
-        entry.setInfoXml("<infoXml distribution=\"123\" />");
+        CatalogEntry entry = entry(100, "<infoXml distribution=\"123\" />");
 
         String catalogXml = factory.build(Arrays.asList(entry));
 
@@ -44,11 +65,8 @@ public class CatalogFactoryTest {
 
     @Test
     public void build_entries() {
-        CatalogEntry entry = new CatalogEntry();
-        entry.setInfoXml("<infoXml/>");
-
-        CatalogEntry otherEntry = new CatalogEntry();
-        otherEntry.setInfoXml("<infoXml-2/>");
+        CatalogEntry entry = entry(0, "<infoXml/>");
+        CatalogEntry otherEntry = entry(1, "<infoXml-2/>");
 
         String catalogXml = factory.build(Arrays.asList(entry, otherEntry));
 
@@ -58,7 +76,7 @@ public class CatalogFactoryTest {
 
     @Test
     public void build_emptyCatalog() {
-        String catalogTimestamp = makeCatalogTimestampFrom(new DateTime());
+        String catalogTimestamp = makeCatalogTimestampFrom(today());
 
         String catalogXml = factory.build(new ArrayList());
 
@@ -84,5 +102,17 @@ public class CatalogFactoryTest {
         catalogTimestamp += today.getMonthOfYear() + "/";
         catalogTimestamp += today.getYear();
         return catalogTimestamp;
+    }
+
+    private CatalogEntry entry(int id, String infoXml) {
+        return entry(id, infoXml, today());
+    }
+
+    private CatalogEntry entry(int id, String infoXml, DateTime updateDate) {
+        CatalogEntry entry = new CatalogEntry();
+        entry.setId(id);
+        entry.setInfoXml(infoXml);
+        entry.setUpdateDate(updateDate);
+        return entry;
     }
 }
