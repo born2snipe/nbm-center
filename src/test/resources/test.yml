@@ -9,7 +9,7 @@ database:
       password:
 
       # the JDBC URL
-      url: jdbc:h2:mem
+      url: jdbc:h2:mem:test
 
       # any properties specific to your JDBC driver:
       properties:

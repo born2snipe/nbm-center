@@ -22,6 +22,7 @@ import com.yammer.dropwizard.migrations.MigrationsBundle;
 import nbm.center.catalog.CatalogEntry;
 import nbm.center.catalog.CatalogRepository;
 import nbm.center.catalog.CatalogResource;
+import nbm.center.catalog.CompressedCatalogResource;
 import nbm.center.module.Module;
 import nbm.center.module.ModuleRepository;
 import nbm.center.module.ModuleResource;
@@ -50,6 +51,7 @@ public class NbmCenterService extends Service<NbmCenterConfiguration> {
         SessionFactory sessionFactory = hibernate.getSessionFactory();
         environment.addResource(new ModuleResource(new ModuleRepository(sessionFactory)));
         environment.addResource(new CatalogResource(new CatalogRepository(sessionFactory)));
+        environment.addResource(new CompressedCatalogResource(new CatalogRepository(sessionFactory)));
     }
 
     public static void main(String[] args) throws Exception {
