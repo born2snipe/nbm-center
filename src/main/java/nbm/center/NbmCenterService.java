@@ -16,34 +16,22 @@ package nbm.center;
 import com.yammer.dropwizard.Service;
 import com.yammer.dropwizard.config.Bootstrap;
 import com.yammer.dropwizard.config.Environment;
-import com.yammer.dropwizard.db.DatabaseConfiguration;
 import com.yammer.dropwizard.hibernate.HibernateBundle;
-import com.yammer.dropwizard.migrations.MigrationsBundle;
-import nbm.center.catalog.CatalogEntry;
 import nbm.center.catalog.CatalogRepository;
 import nbm.center.catalog.CatalogResource;
 import nbm.center.catalog.CompressedCatalogResource;
-import nbm.center.module.Module;
 import nbm.center.module.ModuleRepository;
 import nbm.center.module.ModuleResource;
 import org.hibernate.SessionFactory;
 
 public class NbmCenterService extends Service<NbmCenterConfiguration> {
-    private final HibernateBundle<NbmCenterConfiguration> hibernate = new HibernateBundle<NbmCenterConfiguration>(Module.class, CatalogEntry.class) {
-        public DatabaseConfiguration getDatabaseConfiguration(NbmCenterConfiguration configuration) {
-            return configuration.getDatabaseConfiguration();
-        }
-    };
+    private final HibernateBundle<NbmCenterConfiguration> hibernate = new NbmCenterHibernateBundle();
 
     @Override
     public void initialize(Bootstrap<NbmCenterConfiguration> bootstrap) {
         bootstrap.setName("nbm-center");
         bootstrap.addBundle(hibernate);
-        bootstrap.addBundle(new MigrationsBundle<NbmCenterConfiguration>() {
-            public DatabaseConfiguration getDatabaseConfiguration(NbmCenterConfiguration configuration) {
-                return configuration.getDatabaseConfiguration();
-            }
-        });
+        bootstrap.addBundle(new NbmCenterMigrationBundle());
     }
 
     @Override
