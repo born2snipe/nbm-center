@@ -16,6 +16,7 @@ package nbm.center.module;
 import com.sun.jersey.core.header.FormDataContentDisposition;
 import com.sun.jersey.multipart.FormDataParam;
 import com.yammer.dropwizard.hibernate.UnitOfWork;
+import com.yammer.metrics.annotation.Timed;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -35,6 +36,7 @@ public class ModuleResource {
     @POST
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @UnitOfWork
+    @Timed
     public Response upload(@FormDataParam("file") InputStream fileContents, @FormDataParam("file") FormDataContentDisposition disposition) {
         repository.save(factory.build(fileContents));
         return Response.ok().build();
@@ -45,8 +47,8 @@ public class ModuleResource {
     @Consumes
     @Produces(MediaType.APPLICATION_OCTET_STREAM)
     @UnitOfWork(transactional = false, readOnly = true)
+    @Timed
     public StreamingOutput getById(@PathParam("id") final int id) {
-        System.out.println("ModuleResource.getById");
         InputStream inputStream = repository.findBinaryById(id);
         if (inputStream == null) {
             return null;
@@ -56,6 +58,7 @@ public class ModuleResource {
 
     @Path("/{id}.nbm")
     @DELETE
+    @Timed
     public void delete(@PathParam("id") int id) {
         repository.delete(id);
     }

@@ -15,6 +15,7 @@ package nbm.center.catalog;
 
 import com.google.common.io.ByteStreams;
 import com.yammer.dropwizard.hibernate.UnitOfWork;
+import com.yammer.metrics.annotation.Timed;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -36,6 +37,7 @@ public class CompressedCatalogResource {
     @GET
     @Produces("application/gzip")
     @UnitOfWork
+    @Timed
     public Response getCompressedCatalog() throws Exception {
         byte[] catalogXml = compress(factory.build());
         return Response
@@ -51,7 +53,4 @@ public class CompressedCatalogResource {
         return data.toByteArray();
     }
 
-    public void setFactory(CatalogXmlFactory factory) {
-
-    }
 }

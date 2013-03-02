@@ -15,6 +15,7 @@ package nbm.center.catalog;
 
 
 import com.yammer.dropwizard.hibernate.UnitOfWork;
+import com.yammer.metrics.annotation.Timed;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -33,6 +34,7 @@ public class CatalogResource {
     @GET
     @Produces(MediaType.APPLICATION_XML)
     @UnitOfWork
+    @Timed
     public Response getCatalog() {
         return Response
                 .ok(factory.build())
