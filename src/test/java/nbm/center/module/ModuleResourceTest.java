@@ -24,10 +24,8 @@ import org.mockito.runners.MockitoJUnitRunner;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.text.ParseException;
 
 import static junit.framework.Assert.*;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -46,17 +44,6 @@ public class ModuleResourceTest {
         resource.setFactory(factory);
     }
 
-    @Test
-    public void upload() throws ParseException {
-        ByteArrayInputStream input = new ByteArrayInputStream(new byte[0]);
-        Module module = new Module();
-
-        when(factory.build(input, contentDisposition)).thenReturn(module);
-
-        resource.upload(input, contentDisposition);
-
-        verify(repository).save(module);
-    }
 
     @Test
     public void getById_noModuleFound() throws IOException {

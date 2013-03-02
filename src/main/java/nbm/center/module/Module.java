@@ -14,6 +14,8 @@
 package nbm.center.module;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.joda.time.DateTime;
 
 import javax.persistence.Entity;
@@ -26,13 +28,20 @@ import javax.persistence.Table;
 public class Module {
     @Id
     @GeneratedValue
+    @JsonProperty
     private int id;
 
+    @JsonIgnore
     private byte[] fileContents;
+    @JsonProperty
     private String codenamebase;
+    @JsonIgnore
     private String infoXml;
+    @JsonProperty
     private DateTime updateDate = new DateTime();
+    @JsonIgnore
     private int fileSize;
+    @JsonProperty
     private String originalFilename;
 
     public int getId() {

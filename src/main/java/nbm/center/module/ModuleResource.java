@@ -41,14 +41,14 @@ public class ModuleResource {
 
     @POST
     @Consumes(MediaType.MULTIPART_FORM_DATA)
+    @Produces(MediaType.APPLICATION_JSON)
     @UnitOfWork
     @Timed
     public Response upload(@FormDataParam("file") InputStream fileContents, @FormDataParam("file") FormDataContentDisposition disposition) {
         Module module = factory.build(fileContents, disposition);
         LOGGER.info("Uploading module: codenamebase=[" + module.getCodenamebase() + "], fileSize=" + module.getFileSize() + " byte(s)");
         fileSizes.update(module.getFileSize());
-        repository.save(module);
-        return Response.ok().build();
+        return Response.ok(repository.save(module)).build();
     }
 
     @Path("/{id}.nbm")
