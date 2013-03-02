@@ -27,18 +27,17 @@ import java.util.zip.GZIPOutputStream;
 
 @Path("/catalog.xml.gz")
 public class CompressedCatalogResource {
-    private final CatalogRepository repository;
-    private CatalogFactory factory = new CatalogFactory();
+    private final CatalogXmlFactory factory;
 
-    public CompressedCatalogResource(CatalogRepository repository) {
-        this.repository = repository;
+    public CompressedCatalogResource(CatalogXmlFactory factory) {
+        this.factory = factory;
     }
 
     @GET
     @Produces("application/gzip")
     @UnitOfWork
     public Response getCompressedCatalog() throws Exception {
-        byte[] catalogXml = compress(factory.build(repository.findAllEntries()));
+        byte[] catalogXml = compress(factory.build());
         return Response
                 .ok(new ByteArrayInputStream(catalogXml))
                 .build();
@@ -52,7 +51,7 @@ public class CompressedCatalogResource {
         return data.toByteArray();
     }
 
-    public void setFactory(CatalogFactory factory) {
-        this.factory = factory;
+    public void setFactory(CatalogXmlFactory factory) {
+
     }
 }

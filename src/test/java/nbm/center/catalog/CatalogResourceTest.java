@@ -13,43 +13,31 @@
  */
 package nbm.center.catalog;
 
-import org.junit.Before;
+import com.yammer.dropwizard.testing.ResourceTest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-
-import javax.ws.rs.core.Response;
-import java.util.Arrays;
-import java.util.List;
 
 import static junit.framework.Assert.assertEquals;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
-public class CatalogResourceTest {
+public class CatalogResourceTest extends ResourceTest {
     @Mock
-    private CatalogFactory factory;
-    @Mock
-    private CatalogRepository repository;
-    @InjectMocks
-    private CatalogResource resource;
+    private CatalogXmlFactory factory;
 
-    @Before
-    public void setUp() throws Exception {
-        resource.setFactory(factory);
+    @Override
+    protected void setUpResources() throws Exception {
+        CatalogResource resource = new CatalogResource(factory);
+
+        when(factory.build()).thenReturn("catalog-content");
+
+        addResource(resource);
     }
 
     @Test
-    public void getCatalog() {
-        List<CatalogEntry> catalogEntries = Arrays.asList(new CatalogEntry());
-        when(repository.findAllEntries()).thenReturn(catalogEntries);
-        when(factory.build(catalogEntries)).thenReturn("catalog");
-
-        Response response = resource.getCatalog();
-
-        assertEquals(200, response.getStatus());
-        assertEquals("catalog", response.getEntity());
+    public void uncompressedCatalog() {
+        assertEquals("catalog-content", client().resource("/catalog.xml").get(String.class));
     }
 }

@@ -24,11 +24,10 @@ import javax.ws.rs.core.Response;
 
 @Path("/catalog.xml")
 public class CatalogResource {
-    private CatalogFactory factory = new CatalogFactory();
-    private final CatalogRepository repository;
+    private final CatalogXmlFactory factory;
 
-    public CatalogResource(CatalogRepository repository) {
-        this.repository = repository;
+    public CatalogResource(CatalogXmlFactory factory) {
+        this.factory = factory;
     }
 
     @GET
@@ -36,11 +35,8 @@ public class CatalogResource {
     @UnitOfWork
     public Response getCatalog() {
         return Response
-                .ok(factory.build(repository.findAllEntries()))
+                .ok(factory.build())
                 .build();
     }
 
-    public void setFactory(CatalogFactory factory) {
-        this.factory = factory;
-    }
 }

@@ -19,8 +19,15 @@ import org.joda.time.DateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CatalogFactory {
-    public String build(List<CatalogEntry> catalogEntries) {
+public class CatalogXmlFactory {
+    private final CatalogRepository repository;
+
+    public CatalogXmlFactory(CatalogRepository repository) {
+        this.repository = repository;
+    }
+
+    public String build() {
+        List<CatalogEntry> catalogEntries = repository.findAllEntries();
         StringBuilder xmlBuilder = new StringBuilder();
         DateTime timestamp = findLatestUpdateDate(catalogEntries);
         xmlBuilder.append(makeCatalogXmlBeginning(timestamp)).append("\n");

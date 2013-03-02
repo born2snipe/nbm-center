@@ -19,6 +19,7 @@ import com.yammer.dropwizard.config.Environment;
 import com.yammer.dropwizard.hibernate.HibernateBundle;
 import nbm.center.catalog.CatalogRepository;
 import nbm.center.catalog.CatalogResource;
+import nbm.center.catalog.CatalogXmlFactory;
 import nbm.center.catalog.CompressedCatalogResource;
 import nbm.center.module.ModuleRepository;
 import nbm.center.module.ModuleResource;
@@ -37,9 +38,11 @@ public class NbmCenterService extends Service<NbmCenterConfiguration> {
     @Override
     public void run(NbmCenterConfiguration configuration, Environment environment) throws Exception {
         SessionFactory sessionFactory = hibernate.getSessionFactory();
+        CatalogXmlFactory catalogXmlFactory = new CatalogXmlFactory(new CatalogRepository(sessionFactory));
+
         environment.addResource(new ModuleResource(new ModuleRepository(sessionFactory)));
-        environment.addResource(new CatalogResource(new CatalogRepository(sessionFactory)));
-        environment.addResource(new CompressedCatalogResource(new CatalogRepository(sessionFactory)));
+        environment.addResource(new CatalogResource(catalogXmlFactory));
+        environment.addResource(new CompressedCatalogResource(catalogXmlFactory));
     }
 
     public static void main(String[] args) throws Exception {

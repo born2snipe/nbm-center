@@ -14,22 +14,25 @@
 package nbm.center.catalog;
 
 import org.joda.time.DateTime;
-import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
+import static org.mockito.Mockito.when;
 
-public class CatalogFactoryTest {
-    private CatalogFactory factory;
+@RunWith(MockitoJUnitRunner.class)
+public class CatalogXmlFactoryTest {
+    @Mock
+    private CatalogRepository repository;
+    @InjectMocks
+    private CatalogXmlFactory factory;
 
-    @Before
-    public void setUp() throws Exception {
-        factory = new CatalogFactory();
-    }
 
     @Test
     public void build_useTheFileSizeAsTheDownloadSize() {
@@ -37,49 +40,39 @@ public class CatalogFactoryTest {
         entry.setInfoXml("downloadsize=\"XXX\"");
         entry.setFileSize(1234);
 
-        String catalogXml = factory.build(Arrays.asList(entry));
+        expectEntries(entry);
+
+        String catalogXml = factory.build();
 
         assertTrue(catalogXml.contains("downloadsize=\"1234\""));
     }
 
     @Test
     public void build_useTheEntryUpdateDateForTheCatalogTimestamp() {
-        String catalogXml = factory.build(Arrays.asList(
+        expectEntries(
                 entry(1, "", yesterday()),
                 entry(2, "", today()),
-                entry(3, "", twoDaysAgo())
-        ));
+                entry(3, "", twoDaysAgo()));
+
+        String catalogXml = factory.build();
 
         assertTrue(catalogXml.contains("<module_updates timestamp=\"" + makeCatalogTimestampFrom(today()) + "\">"));
     }
 
-    private DateTime today() {
-        return new DateTime();
-    }
-
-    private DateTime twoDaysAgo() {
-        return today().minusDays(2);
-    }
-
-    private DateTime yesterday() {
-        return today().minusDays(1);
-    }
-
     @Test
     public void build_updatesTheModulesDistributionPath() {
-        CatalogEntry entry = entry(100, "<infoXml distribution=\"123\" />");
+        expectEntries(entry(100, "<infoXml distribution=\"123\" />"));
 
-        String catalogXml = factory.build(Arrays.asList(entry));
+        String catalogXml = factory.build();
 
         assertCatalogContainsEntry("<infoXml distribution=\"module/100.nbm\" />", catalogXml);
     }
 
     @Test
     public void build_entries() {
-        CatalogEntry entry = entry(0, "<infoXml/>");
-        CatalogEntry otherEntry = entry(1, "<infoXml-2/>");
+        expectEntries(entry(0, "<infoXml/>"), entry(1, "<infoXml-2/>"));
 
-        String catalogXml = factory.build(Arrays.asList(entry, otherEntry));
+        String catalogXml = factory.build();
 
         assertCatalogContainsEntry("<infoXml/>", catalogXml);
         assertCatalogContainsEntry("<infoXml-2/>", catalogXml);
@@ -88,8 +81,9 @@ public class CatalogFactoryTest {
     @Test
     public void build_emptyCatalog() {
         String catalogTimestamp = makeCatalogTimestampFrom(today());
+        expectEntries();
 
-        String catalogXml = factory.build(new ArrayList());
+        String catalogXml = factory.build();
 
         assertEquals("<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n" +
                 "<!DOCTYPE module_updates PUBLIC \"-//NetBeans//DTD Autoupdate Catalog 2.7//EN\" \"http://www.netbeans.org/dtds/autoupdate-catalog-2_7.dtd\">\n" +
@@ -125,5 +119,21 @@ public class CatalogFactoryTest {
         entry.setInfoXml(infoXml);
         entry.setUpdateDate(updateDate);
         return entry;
+    }
+
+    private void expectEntries(CatalogEntry... entry) {
+        when(repository.findAllEntries()).thenReturn(Arrays.asList(entry));
+    }
+
+    private DateTime today() {
+        return new DateTime();
+    }
+
+    private DateTime twoDaysAgo() {
+        return today().minusDays(2);
+    }
+
+    private DateTime yesterday() {
+        return today().minusDays(1);
     }
 }
