@@ -17,6 +17,8 @@ import com.sun.jersey.core.header.FormDataContentDisposition;
 import com.sun.jersey.multipart.FormDataParam;
 import com.yammer.dropwizard.hibernate.UnitOfWork;
 import com.yammer.metrics.annotation.Timed;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -26,6 +28,7 @@ import java.io.InputStream;
 
 @Path("/module")
 public class ModuleResource {
+    private static final Logger LOGGER = LoggerFactory.getLogger(ModuleResource.class);
     private final ModuleRepository repository;
     private ModuleFactory factory = new ModuleFactory();
 
@@ -38,7 +41,9 @@ public class ModuleResource {
     @UnitOfWork
     @Timed
     public Response upload(@FormDataParam("file") InputStream fileContents, @FormDataParam("file") FormDataContentDisposition disposition) {
-        repository.save(factory.build(fileContents));
+        Module module = factory.build(fileContents);
+        LOGGER.info("Uploading module: codenamebase=[" + module.getCodenamebase() + "], fileSize=" + module.getFileSize() + " byte(s)");
+        repository.save(module);
         return Response.ok().build();
     }
 
