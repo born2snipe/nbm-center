@@ -27,8 +27,10 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.StreamingOutput;
 import java.io.InputStream;
+import java.util.List;
 
 @Path("/module")
+@Produces(MediaType.APPLICATION_JSON)
 public class ModuleResource {
     private static final Logger LOGGER = LoggerFactory.getLogger(ModuleResource.class);
     private final Histogram fileSizes = Metrics.newHistogram(ModuleResource.class, "file-sizes-in-bytes");
@@ -41,7 +43,6 @@ public class ModuleResource {
 
     @POST
     @Consumes(MediaType.MULTIPART_FORM_DATA)
-    @Produces(MediaType.APPLICATION_JSON)
     @UnitOfWork
     @Timed
     public Response upload(@FormDataParam("file") InputStream fileContents, @FormDataParam("file") FormDataContentDisposition disposition) {
@@ -70,6 +71,14 @@ public class ModuleResource {
     @Timed
     public void delete(@PathParam("id") int id) {
         repository.delete(id);
+    }
+
+    @Path("/all")
+    @GET
+    @Timed
+    @UnitOfWork
+    public List<Module> getAll() {
+        return repository.findAll();
     }
 
     public void setFactory(ModuleFactory factory) {

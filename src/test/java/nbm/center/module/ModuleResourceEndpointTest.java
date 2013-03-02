@@ -27,6 +27,8 @@ import javax.ws.rs.core.MediaType;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Arrays;
+import java.util.List;
 
 import static junit.framework.Assert.assertEquals;
 import static org.mockito.Matchers.any;
@@ -47,6 +49,13 @@ public class ModuleResourceEndpointTest extends ResourceTest {
         resource.setFactory(factory);
 
         addResource(resource);
+    }
+
+    @Test
+    public void getAll() throws IOException {
+        when(repository.findAll()).thenReturn(Arrays.asList(new Module(), new Module()));
+
+        assertEquals(2, client().resource("/module/all").get(List.class).size());
     }
 
     @Test

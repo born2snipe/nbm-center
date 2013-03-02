@@ -34,6 +34,14 @@ public class ModuleRepositoryTest extends RepositoryTest {
     }
 
     @Test
+    public void findAll() {
+        repository.save(module("1", "1"));
+        repository.save(module("2", "2"));
+
+        assertEquals(2, repository.findAll().size());
+    }
+
+    @Test
     public void save_updatesExistingRecordsUpdateDate() throws IOException {
         DateTime now = new DateTime();
         repository.save(module("code-name", now.minusDays(1), "data"));

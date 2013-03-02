@@ -11,7 +11,8 @@ This is an application that will host NBMs for Netbeans it's self or for a Netbe
 This will setup a H2 database and start the server and you are ready to start uploading your modules to the center.
 
 ## Available Endpoints
-- POST to `/module` - uploads a NBM to be saved or updated in the center
+- GET to `/module/all` - returns JSON of all the modules in the center
+- POST to `/module` - uploads a NBM to be saved or updated in the center and returns JSON of that module
 - GET from `/module/{id}.nbm` - streams the NBM file contents
 - DELETE from `/module/{id}.nbm` - removes a NBM from the center
 - GET from `/catalog.xml` - streams the catalog XML used by Netbeans or a platform application

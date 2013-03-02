@@ -59,4 +59,8 @@ public class ModuleRepository extends AbstractDAO<Module> {
         query.setParameter(0, codenamebase);
         return uniqueResult(query);
     }
+
+    public List<Module> findAll() {
+        return list(currentSession().createQuery("select m from Module m"));
+    }
 }
