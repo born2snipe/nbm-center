@@ -1,6 +1,6 @@
 # NBM Center
 
-This is an application that will host Netbeans Plugins for Netbeans it's self or for a Netbeans platform application.
+This is an application that will host NBMs for Netbeans it's self or for a Netbeans platform application.
 
 ## Getting started
 - Download the latest jar file
@@ -22,4 +22,8 @@ This will setup a H2 database and start the server and you are ready to start up
 ## FAQ
 - Can I change the type of database (MySQL, Oracle, etc)?
     - To do this all you need to do is put your JDBC driver in the classpath and create your own configuration file.
+
+- How to upload a NBM to the center?
+    - Using curl: `>curl -F "file=@my-fancy-plugin.nbm" http://localhost:8080/module`
+
 
