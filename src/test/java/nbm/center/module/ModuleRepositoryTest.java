@@ -87,6 +87,7 @@ public class ModuleRepositoryTest extends RepositoryTest {
         module.setCodenamebase(codenamebase);
         module.setInfoXml("info.xml");
         module.setUpdateDate(updateDate);
+        module.setOriginalFilename("original");
         return module;
     }
 }

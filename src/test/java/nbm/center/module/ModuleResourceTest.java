@@ -13,6 +13,7 @@
  */
 package nbm.center.module;
 
+import com.sun.jersey.core.header.FormDataContentDisposition;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -32,6 +33,8 @@ import static org.mockito.Mockito.when;
 @RunWith(MockitoJUnitRunner.class)
 public class ModuleResourceTest {
     @Mock
+    private FormDataContentDisposition contentDisposition;
+    @Mock
     private ModuleFactory factory;
     @Mock
     private ModuleRepository repository;
@@ -48,9 +51,9 @@ public class ModuleResourceTest {
         ByteArrayInputStream input = new ByteArrayInputStream(new byte[0]);
         Module module = new Module();
 
-        when(factory.build(input)).thenReturn(module);
+        when(factory.build(input, contentDisposition)).thenReturn(module);
 
-        resource.upload(input, null);
+        resource.upload(input, contentDisposition);
 
         verify(repository).save(module);
     }

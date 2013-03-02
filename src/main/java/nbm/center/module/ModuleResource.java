@@ -44,7 +44,7 @@ public class ModuleResource {
     @UnitOfWork
     @Timed
     public Response upload(@FormDataParam("file") InputStream fileContents, @FormDataParam("file") FormDataContentDisposition disposition) {
-        Module module = factory.build(fileContents);
+        Module module = factory.build(fileContents, disposition);
         LOGGER.info("Uploading module: codenamebase=[" + module.getCodenamebase() + "], fileSize=" + module.getFileSize() + " byte(s)");
         fileSizes.update(module.getFileSize());
         repository.save(module);

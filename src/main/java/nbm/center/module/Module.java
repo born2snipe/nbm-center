@@ -33,6 +33,7 @@ public class Module {
     private String infoXml;
     private DateTime updateDate = new DateTime();
     private int fileSize;
+    private String originalFilename;
 
     public int getId() {
         return id;
@@ -77,5 +78,13 @@ public class Module {
 
     public int getFileSize() {
         return fileSize;
+    }
+
+    public String getOriginalFilename() {
+        return originalFilename;
+    }
+
+    public void setOriginalFilename(String originalFilename) {
+        this.originalFilename = originalFilename;
     }
 }

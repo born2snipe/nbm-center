@@ -13,15 +13,22 @@
  */
 package nbm.center.module;
 
+import com.sun.jersey.core.header.FormDataContentDisposition;
 import nbm.center.NbmFileBuilder;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;
+import static org.mockito.Mockito.when;
 
+@RunWith(MockitoJUnitRunner.class)
 public class ModuleFactoryTest {
-
+    @Mock
+    private FormDataContentDisposition contentDisposition;
     private ModuleFactory factory;
     private NbmFileBuilder nbmBuilder;
 
@@ -34,9 +41,11 @@ public class ModuleFactoryTest {
     @Test
     public void build() {
         nbmBuilder.codebasename("code-base");
+        when(contentDisposition.getFileName()).thenReturn("file-name");
 
-        Module module = factory.build(nbmBuilder.toInputStream());
+        Module module = factory.build(nbmBuilder.toInputStream(), contentDisposition);
 
+        assertEquals("file-name", module.getOriginalFilename());
         assertEquals("code-base", module.getCodenamebase());
         assertFalse(module.getInfoXml().contains("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"));
         assertFalse(module.getInfoXml().contains("<!DOCTYPE module PUBLIC \"-//NetBeans//DTD Autoupdate Module Info 2.4//EN\" \"http://www.netbeans.org/dtds/autoupdate-info-2_4.dtd\">"));

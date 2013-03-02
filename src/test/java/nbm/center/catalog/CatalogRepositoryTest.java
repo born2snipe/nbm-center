@@ -48,6 +48,7 @@ public class CatalogRepositoryTest extends RepositoryTest {
         module.setCodenamebase(infoXml);
         module.setInfoXml(infoXml);
         module.setFileContents(new byte[0]);
+        module.setOriginalFilename("original");
         Module savedModule = moduleRepository.save(module);
         session.flush();
         return savedModule;

@@ -14,6 +14,7 @@
 package nbm.center.module;
 
 import com.google.common.io.ByteStreams;
+import com.sun.jersey.core.header.FormDataContentDisposition;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -27,7 +28,7 @@ import java.util.zip.ZipInputStream;
 public class ModuleFactory {
     private static final Pattern CODEBASENAME_PATTERN = Pattern.compile("codenamebase=\"(.+?)\"");
 
-    public Module build(InputStream input) {
+    public Module build(InputStream input, FormDataContentDisposition contentDisposition) {
         byte[] fileContents = readFileContents(input);
         String infoXml = readModuleInfoFrom(fileContents);
         infoXml = removeNoLongerNeededXmlTags(infoXml);
@@ -36,6 +37,7 @@ public class ModuleFactory {
         module.setCodenamebase(readCodebaseNameFrom(infoXml));
         module.setInfoXml(infoXml);
         module.setFileContents(fileContents);
+        module.setOriginalFilename(contentDisposition.getFileName());
         return module;
     }
 
