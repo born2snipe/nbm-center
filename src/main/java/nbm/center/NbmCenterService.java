@@ -44,8 +44,4 @@ public class NbmCenterService extends Service<NbmCenterConfiguration> {
         environment.addResource(new CatalogResource(catalogXmlFactory));
         environment.addResource(new CompressedCatalogResource(catalogXmlFactory));
     }
-
-    public static void main(String[] args) throws Exception {
-        new NbmCenterService().run(args);
-    }
 }
