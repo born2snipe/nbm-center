@@ -16,7 +16,9 @@ package nbm.center.module;
 import com.sun.jersey.core.header.FormDataContentDisposition;
 import com.sun.jersey.multipart.FormDataParam;
 import com.yammer.dropwizard.hibernate.UnitOfWork;
+import com.yammer.metrics.Metrics;
 import com.yammer.metrics.annotation.Timed;
+import com.yammer.metrics.core.Histogram;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,6 +31,7 @@ import java.io.InputStream;
 @Path("/module")
 public class ModuleResource {
     private static final Logger LOGGER = LoggerFactory.getLogger(ModuleResource.class);
+    private final Histogram fileSizes = Metrics.newHistogram(ModuleResource.class, "file-sizes-in-bytes");
     private final ModuleRepository repository;
     private ModuleFactory factory = new ModuleFactory();
 
@@ -43,6 +46,7 @@ public class ModuleResource {
     public Response upload(@FormDataParam("file") InputStream fileContents, @FormDataParam("file") FormDataContentDisposition disposition) {
         Module module = factory.build(fileContents);
         LOGGER.info("Uploading module: codenamebase=[" + module.getCodenamebase() + "], fileSize=" + module.getFileSize() + " byte(s)");
+        fileSizes.update(module.getFileSize());
         repository.save(module);
         return Response.ok().build();
     }
