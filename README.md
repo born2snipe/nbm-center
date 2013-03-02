@@ -17,7 +17,7 @@ This will setup a H2 database and start the server and you are ready to start up
 - GET from `/catalog.xml` - streams the catalog XML used by Netbeans or a platform application
 - GET from `/catalog.xml.gz` - streams the catalog XML compressed using gzip this is also can be used by Netbeans or a platform application
 
-#### Note: This application was built using Drop Wizard so you also have access to the default endpoints provided by the framework.
+#### Note: This application was built using [DropWizard](http://dropwizard.codahale.com) so you also have access to the default endpoints provided by the framework.
 
 ## FAQ
 - Can I change the type of database (MySQL, Oracle, etc)?
